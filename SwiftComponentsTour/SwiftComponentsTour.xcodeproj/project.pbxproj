@@ -137,8 +137,8 @@
 		71B3F4AC1B4AE87C0021E73B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				71B3F4B21B4AE8F00021E73B /* Detail */,
 				71B3F4AE1B4AE87C0021E73B /* NIOMasterViewController.swift */,
+				71B3F4B21B4AE8F00021E73B /* Detail */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -486,6 +486,7 @@
 				71B3F4A81B4ACD640021E73B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71B3F4A91B4ACD640021E73B /* Build configuration list for PBXNativeTarget "SwiftComponentsTourTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				71B3F4AB1B4ACD640021E73B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

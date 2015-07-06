@@ -24,7 +24,7 @@
         <!--Label-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Label" id="JEX-9P-axG" customClass="NIOLabelViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Labels" title="Label" id="JEX-9P-axG" customClass="NIOLabelViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -109,9 +109,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="GIo-R1-koI"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -134,18 +131,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
-                        <segue destination="vqU-FE-fiw" kind="show" identifier="TextField" id="TXg-7A-U0M"/>
-                        <segue destination="ZF7-6r-DWN" kind="show" identifier="TextView" id="KsK-jz-ylZ"/>
-                        <segue destination="hDO-Go-tTl" kind="show" identifier="Button" id="rpe-Ry-lml"/>
-                        <segue destination="eV1-GA-ZDj" kind="show" identifier="Switch" id="kEC-gj-gNa"/>
-                        <segue destination="HLN-CR-j2f" kind="show" identifier="SegementedControl" id="4my-3I-YwZ"/>
-                        <segue destination="qAz-Ur-KXd" kind="show" identifier="Stepper" id="CNx-4V-GDK"/>
-                        <segue destination="0P3-d7-twk" kind="show" identifier="Slider" id="Dtu-46-8ao"/>
-                        <segue destination="E5Y-n0-1gU" kind="show" identifier="ProgressAndActivity" id="t0D-Li-qze"/>
-                        <segue destination="4zb-V0-Xju" kind="show" identifier="Pickers" id="Wfq-es-GbD"/>
-                        <segue destination="T1f-Sf-f1U" kind="show" identifier="Gestures" id="5Yu-1R-esI"/>
-                        <segue destination="UO8-2f-Y9W" kind="show" identifier="Accelerometer" id="SeB-I8-cVc"/>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="KLz-cI-1Db"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,7 +141,7 @@
         <!--Text Field-->
         <scene sceneID="Ug8-Vm-uZa">
             <objects>
-                <viewController title="Text Field" id="vqU-FE-fiw" customClass="NIOTextFieldViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Text Fields" title="Text Field" id="vqU-FE-fiw" customClass="NIOTextFieldViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MEn-54-5r8"/>
                         <viewControllerLayoutGuide type="bottom" id="jxR-UK-4Pk"/>
@@ -220,7 +206,7 @@
         <!--Text View-->
         <scene sceneID="oZt-T9-tb1">
             <objects>
-                <viewController title="Text View" id="ZF7-6r-DWN" customClass="NIOTextViewViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Text Views" title="Text View" id="ZF7-6r-DWN" customClass="NIOTextViewViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xjT-bg-wEi"/>
                         <viewControllerLayoutGuide type="bottom" id="h3a-Uh-yaQ"/>
@@ -255,7 +241,7 @@
         <!--Button-->
         <scene sceneID="5w7-Yg-nJg">
             <objects>
-                <viewController title="Button" id="hDO-Go-tTl" customClass="NIOButtonViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Buttons" title="Button" id="hDO-Go-tTl" customClass="NIOButtonViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FiN-7O-Dcq"/>
                         <viewControllerLayoutGuide type="bottom" id="GjE-0K-x0y"/>
@@ -303,7 +289,7 @@
         <!--Segmented Control-->
         <scene sceneID="Bc7-aP-swT">
             <objects>
-                <viewController title="Segmented Control" id="HLN-CR-j2f" customClass="NIOSegmentedControlViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Segmented Controls" title="Segmented Control" id="HLN-CR-j2f" customClass="NIOSegmentedControlViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qcS-bF-ce9"/>
                         <viewControllerLayoutGuide type="bottom" id="c1y-2u-Xce"/>
@@ -374,7 +360,7 @@
         <!--Stepper-->
         <scene sceneID="h9Z-jc-Dfy">
             <objects>
-                <viewController title="Stepper" id="qAz-Ur-KXd" customClass="NIOStepperViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Steppers" title="Stepper" id="qAz-Ur-KXd" customClass="NIOStepperViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TQB-dG-LdZ"/>
                         <viewControllerLayoutGuide type="bottom" id="aOa-3B-yjO"/>
@@ -449,12 +435,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM3-oq-49f" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="2220"/>
+            <point key="canvasLocation" x="1374" y="2247"/>
         </scene>
         <!--Switch-->
         <scene sceneID="uJr-wJ-saR">
             <objects>
-                <viewController title="Switch" id="eV1-GA-ZDj" customClass="NIOSwitchViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Switches" title="Switch" id="eV1-GA-ZDj" customClass="NIOSwitchViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="miv-e0-qD3"/>
                         <viewControllerLayoutGuide type="bottom" id="HgN-gR-BoQ"/>
@@ -503,7 +489,7 @@
         <!--Slider-->
         <scene sceneID="lcb-Vl-rSK">
             <objects>
-                <viewController title="Slider" id="0P3-d7-twk" customClass="NIOSliderViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sliders" title="Slider" id="0P3-d7-twk" customClass="NIOSliderViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cxq-kQ-3Tr"/>
                         <viewControllerLayoutGuide type="bottom" id="pdq-iT-WcK"/>
@@ -547,7 +533,7 @@
         <!--Progress and Activity-->
         <scene sceneID="Hxm-4v-0ER">
             <objects>
-                <viewController title="Progress and Activity" id="E5Y-n0-1gU" customClass="NIOProgressViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Progress and Activity" title="Progress and Activity" id="E5Y-n0-1gU" customClass="NIOProgressViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KcR-sC-zF3"/>
                         <viewControllerLayoutGuide type="bottom" id="PUV-i2-DXt"/>
@@ -592,7 +578,7 @@
         <!--Pickers-->
         <scene sceneID="OwP-7z-dS1">
             <objects>
-                <viewController title="Pickers" id="4zb-V0-Xju" customClass="NIOPickersViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pickers" title="Pickers" id="4zb-V0-Xju" customClass="NIOPickersViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YoJ-jz-Wo4"/>
                         <viewControllerLayoutGuide type="bottom" id="QB3-0D-aIf"/>
@@ -652,7 +638,7 @@
         <!--Gestures-->
         <scene sceneID="KHf-Z3-lYT">
             <objects>
-                <viewController title="Gestures" id="T1f-Sf-f1U" customClass="NIOGesturesViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Gestures" title="Gestures" id="T1f-Sf-f1U" customClass="NIOGesturesViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ey-E4-JLA"/>
                         <viewControllerLayoutGuide type="bottom" id="CRX-hJ-asH"/>
@@ -718,7 +704,7 @@
         <!--Accelerometer-->
         <scene sceneID="VHz-rq-g72">
             <objects>
-                <viewController title="Accelerometer" id="UO8-2f-Y9W" customClass="NIOAccelerometerViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Accelerometer" title="Accelerometer" id="UO8-2f-Y9W" customClass="NIOAccelerometerViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V8X-2j-6XO"/>
                         <viewControllerLayoutGuide type="bottom" id="TXh-nx-9fL"/>
@@ -824,7 +810,4 @@
             <point key="canvasLocation" x="2058" y="2247"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="GIo-R1-koI"/>
-    </inferredMetricsTieBreakers>
 </document>

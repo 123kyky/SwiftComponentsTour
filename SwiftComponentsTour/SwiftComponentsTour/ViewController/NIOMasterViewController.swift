@@ -8,9 +8,22 @@
 
 import UIKit
 
-class NIOMasterViewController: UITableViewController {
-    var objects = [AnyObject]()
-
+class NIOMasterViewController: UITableViewController, UISplitViewControllerDelegate {
+    var sections = [
+        ["Labels",
+            "Text Fields",
+            "Text Views"],
+        ["Buttons",
+            "Switches",
+            "Segmented Controls",
+            "Steppers",
+            "Sliders"],
+        ["Progress and Activity",
+            "Pickers",
+            "Gestures",
+            "Accelerometer"]
+        ]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.clearsSelectionOnViewWillAppear = false
@@ -19,43 +32,55 @@ class NIOMasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional  setup after loading the view, typically from a nib.
         
-        let controllers = self.splitViewController!.viewControllers
-    }
-    
-    // MARK: - Segues
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row] as! NSDate
-//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-//                controller.detailItem = object
-//                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
+        self.splitViewController!.delegate = self
+        NSLog("\(self.splitViewController!)")
     }
 
     // MARK: - Table View
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return sections.count
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title: String?
+        switch (section) {
+        case 0:
+            title = "Text Components"
+        case 1:
+            title = "Basic Interation"
+        case 2:
+            title = "Advanced Interaction"
+        default:
+            title = ""
+        }
+        
+        return title
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        let section = sections[section]
+        return section.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        
+        cell.textLabel!.text = sections[indexPath.section][indexPath.row]
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.splitViewController?.collapseSecondaryViewController(self.splitViewController?.viewControllers.first as! UIViewController, forSplitViewController: self.splitViewController!)
+        
+        let controller: UIViewController? = storyboard?.instantiateViewControllerWithIdentifier(sections[indexPath.section][indexPath.row]) as? UIViewController
+        (splitViewController!.viewControllers.last as! UINavigationController).setViewControllers([controller!], animated: true)
+        controller!.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+        controller!.navigationItem.leftItemsSupplementBackButton = true
+    }
 
 }
 
