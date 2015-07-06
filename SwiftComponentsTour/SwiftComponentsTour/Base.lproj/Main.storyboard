@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="-40" y="-630"/>
         </scene>
-        <!--Detail-->
+        <!--Label-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Label" id="JEX-9P-axG" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -33,6 +34,13 @@
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
                                 <rect key="frame" x="20" y="292" width="560" height="17"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0AR-EQ-z8G">
+                                <rect key="frame" x="279" y="403" width="43" height="69"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -74,7 +82,7 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,14 +131,544 @@
                     </navigationBar>
                     <connections>
                         <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
+                        <segue destination="vqU-FE-fiw" kind="show" id="TXg-7A-U0M"/>
+                        <segue destination="ZF7-6r-DWN" kind="show" id="KsK-jz-ylZ"/>
+                        <segue destination="hDO-Go-tTl" kind="show" id="rpe-Ry-lml"/>
+                        <segue destination="eV1-GA-ZDj" kind="show" id="kEC-gj-gNa"/>
+                        <segue destination="HLN-CR-j2f" kind="show" id="4my-3I-YwZ"/>
+                        <segue destination="qAz-Ur-KXd" kind="show" id="CNx-4V-GDK"/>
+                        <segue destination="0P3-d7-twk" kind="show" id="Dtu-46-8ao"/>
+                        <segue destination="E5Y-n0-1gU" kind="show" id="t0D-Li-qze"/>
+                        <segue destination="4zb-V0-Xju" kind="show" id="Wfq-es-GbD"/>
+                        <segue destination="T1f-Sf-f1U" kind="show" id="5Yu-1R-esI"/>
+                        <segue destination="UO8-2f-Y9W" kind="show" id="SeB-I8-cVc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-40" y="120"/>
         </scene>
+        <!--Text Field-->
+        <scene sceneID="Ug8-Vm-uZa">
+            <objects>
+                <viewController title="Text Field" id="vqU-FE-fiw" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MEn-54-5r8"/>
+                        <viewControllerLayoutGuide type="bottom" id="jxR-UK-4Pk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ybQ-tH-hfg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLn-c2-V25">
+                                <rect key="frame" x="201" y="285" width="199" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="trt-Be-5ag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W4-Q3-XSL">
+                                <rect key="frame" x="201" y="550" width="199" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiu-Nk-9By">
+                                <rect key="frame" x="293" y="420" width="14" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ZSx-mQ-5VE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-TW-L7p">
+                                <rect key="frame" x="150" y="172" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="gx8-aF-h9Z"/>
+                                    <constraint firstAttribute="height" constant="21" id="vc9-Pc-WnV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mLn-c2-V25" firstAttribute="top" secondItem="BHF-TW-L7p" secondAttribute="bottom" constant="92" id="6ez-S0-3FK"/>
+                            <constraint firstItem="mLn-c2-V25" firstAttribute="trailing" secondItem="9W4-Q3-XSL" secondAttribute="trailing" id="9qQ-68-j5h"/>
+                            <constraint firstItem="9W4-Q3-XSL" firstAttribute="top" secondItem="aiu-Nk-9By" secondAttribute="bottom" constant="99" id="CFT-8d-05Q"/>
+                            <constraint firstItem="BHF-TW-L7p" firstAttribute="centerX" secondItem="mLn-c2-V25" secondAttribute="centerX" id="DOn-e8-a5e"/>
+                            <constraint firstItem="aiu-Nk-9By" firstAttribute="centerX" secondItem="9W4-Q3-XSL" secondAttribute="centerX" id="JVu-qj-UVC"/>
+                            <constraint firstAttribute="bottom" secondItem="9W4-Q3-XSL" secondAttribute="bottom" constant="20" symbolic="YES" id="NPF-IN-Mw4"/>
+                            <constraint firstItem="mLn-c2-V25" firstAttribute="centerY" secondItem="ybQ-tH-hfg" secondAttribute="centerY" id="Q4T-yY-z2c"/>
+                            <constraint firstItem="aiu-Nk-9By" firstAttribute="centerX" secondItem="ybQ-tH-hfg" secondAttribute="centerX" id="ZPv-fh-q9h"/>
+                            <constraint firstItem="9W4-Q3-XSL" firstAttribute="leading" secondItem="mLn-c2-V25" secondAttribute="leading" id="mZl-Vl-zcc"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="Fr4-lJ-FjY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ek4-CS-TRs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="822"/>
+        </scene>
+        <!--Text View-->
+        <scene sceneID="oZt-T9-tb1">
+            <objects>
+                <viewController title="Text View" id="ZF7-6r-DWN" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xjT-bg-wEi"/>
+                        <viewControllerLayoutGuide type="bottom" id="h3a-Uh-yaQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ugj-db-lDR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QO-Ig-FrQ">
+                                <rect key="frame" x="16" y="20" width="568" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5QO-Ig-FrQ" firstAttribute="trailing" secondItem="ugj-db-lDR" secondAttribute="trailingMargin" id="HkE-VY-mGP"/>
+                            <constraint firstItem="5QO-Ig-FrQ" firstAttribute="leading" secondItem="ugj-db-lDR" secondAttribute="leadingMargin" id="SPN-PK-LXr"/>
+                            <constraint firstAttribute="bottom" secondItem="5QO-Ig-FrQ" secondAttribute="bottom" constant="20" symbolic="YES" id="bgf-Nb-2Lc"/>
+                            <constraint firstItem="5QO-Ig-FrQ" firstAttribute="top" secondItem="ugj-db-lDR" secondAttribute="top" constant="20" symbolic="YES" id="mK4-1t-5Qz"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="Wk3-02-ewW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edW-5S-Pro" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="1521"/>
+        </scene>
+        <!--Button-->
+        <scene sceneID="5w7-Yg-nJg">
+            <objects>
+                <viewController title="Button" id="hDO-Go-tTl" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FiN-7O-Dcq"/>
+                        <viewControllerLayoutGuide type="bottom" id="GjE-0K-x0y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wqR-VJ-9Z1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-2a-rZE">
+                                <rect key="frame" x="199" y="285" width="202" height="30"/>
+                                <state key="normal" title="Randomize background color">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAH-L2-hgA">
+                                <rect key="frame" x="259" y="429" width="83" height="30"/>
+                                <state key="normal" title="Change title">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-Oe-ggk">
+                                <rect key="frame" x="220" y="361" width="161" height="30"/>
+                                <state key="normal" title="Add background image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="mPG-Nk-cYp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9a-u7-w0G" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="120"/>
+        </scene>
+        <!--Segmented Control-->
+        <scene sceneID="Bc7-aP-swT">
+            <objects>
+                <viewController title="Segmented Control" id="HLN-CR-j2f" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qcS-bF-ce9"/>
+                        <viewControllerLayoutGuide type="bottom" id="c1y-2u-Xce"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJg-Ji-dYy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Base" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-XF-0Ro">
+                                <rect key="frame" x="281" y="115" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-4F-XXs">
+                                <rect key="frame" x="286" y="394" width="28" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gvG-SF-Aee">
+                                <rect key="frame" x="157" y="144" width="286" height="29"/>
+                                <segments>
+                                    <segment title="White"/>
+                                    <segment title="Black"/>
+                                    <segment title="Brown"/>
+                                    <segment title="Puce"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aho-iv-Jfo">
+                                <rect key="frame" x="157" y="423" width="286" height="29"/>
+                                <segments>
+                                    <segment title="Red"/>
+                                    <segment title="Blue"/>
+                                    <segment title="Yellow"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="kw2-0V-wuf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCd-l4-1CX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="1521"/>
+        </scene>
+        <!--Stepper-->
+        <scene sceneID="h9Z-jc-Dfy">
+            <objects>
+                <viewController title="Stepper" id="qAz-Ur-KXd" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TQB-dG-LdZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aOa-3B-yjO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qhM-Xe-f2X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="F8X-ck-juU">
+                                <rect key="frame" x="59" y="121" width="94" height="29"/>
+                            </stepper>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your fave number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-FT-3of">
+                                <rect key="frame" x="193" y="121" width="215" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-ew-B31">
+                                <rect key="frame" x="193" y="418" width="215" height="29"/>
+                                <segments>
+                                    <segment title="Volume"/>
+                                    <segment title="Brightness"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Even dates!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-h0-V73">
+                                <rect key="frame" x="63" y="256" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-Ww-pYg">
+                                <rect key="frame" x="193" y="289" width="230" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pgt-gy-r8c">
+                                <rect key="frame" x="59" y="285" width="94" height="29"/>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="08F-iw-ycw">
+                                <rect key="frame" x="61" y="417" width="94" height="29"/>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="IWQ-Vc-Iwt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BM3-oq-49f" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="2220"/>
+        </scene>
+        <!--Switch-->
+        <scene sceneID="uJr-wJ-saR">
+            <objects>
+                <viewController title="Switch" id="eV1-GA-ZDj" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="miv-e0-qD3"/>
+                        <viewControllerLayoutGuide type="bottom" id="HgN-gR-BoQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qXn-ER-OSF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9xC-nO-vtO">
+                                <rect key="frame" x="276" y="159" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-mZ-pnT">
+                                <rect key="frame" x="277" y="130" width="47" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N41-Bv-nMj">
+                                <rect key="frame" x="258" y="481" width="84" height="30"/>
+                                <state key="normal" title="High Beams">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="XHq-N7-AFn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-zN-y6z" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="822"/>
+        </scene>
+        <!--Slider-->
+        <scene sceneID="lcb-Vl-rSK">
+            <objects>
+                <viewController title="Slider" id="0P3-d7-twk" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cxq-kQ-3Tr"/>
+                        <viewControllerLayoutGuide type="bottom" id="pdq-iT-WcK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wky-OC-Yz4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oTT-5S-MRV">
+                                <rect key="frame" x="193" y="101" width="215" height="29"/>
+                                <segments>
+                                    <segment title="Volume"/>
+                                    <segment title="Brightness"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H1H-z4-8rP">
+                                <rect key="frame" x="164" y="147" width="273" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="Dqd-Fk-kRp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frX-Kx-DDf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="2946"/>
+        </scene>
+        <!--Progress and Activity-->
+        <scene sceneID="Hxm-4v-0ER">
+            <objects>
+                <viewController title="Progress and Activity" id="E5Y-n0-1gU" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KcR-sC-zF3"/>
+                        <viewControllerLayoutGuide type="bottom" id="PUV-i2-DXt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7HB-rV-1jx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byd-Gg-aJa">
+                                <rect key="frame" x="284" y="126" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-80-7YB">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dQE-Y5-yaO">
+                                <rect key="frame" x="225" y="355" width="150" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="R2T-WG-BiL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvR-HX-B0T" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="120"/>
+        </scene>
+        <!--Pickers-->
+        <scene sceneID="OwP-7z-dS1">
+            <objects>
+                <viewController title="Pickers" id="4zb-V0-Xju" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YoJ-jz-Wo4"/>
+                        <viewControllerLayoutGuide type="bottom" id="QB3-0D-aIf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SEn-78-ibk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="e8N-aA-hmS">
+                                <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="457892815.73250502">
+                                    <!--2015-07-06 16:26:55 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-DK-zin">
+                                <rect key="frame" x="0.0" y="94" width="600" height="162"/>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick a date, any date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Y6-Ex-8Cm">
+                                <rect key="frame" x="148" y="400" width="304" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your favorite of Apple's favorite cities?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI8-ky-j8a">
+                                <rect key="frame" x="122" y="72" width="356" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="99i-4l-2gF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNb-dw-1cS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="822"/>
+        </scene>
+        <!--Gestures-->
+        <scene sceneID="KHf-Z3-lYT">
+            <objects>
+                <viewController title="Gestures" id="T1f-Sf-f1U" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ey-E4-JLA"/>
+                        <viewControllerLayoutGuide type="bottom" id="CRX-hJ-asH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i8T-OJ-n6d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7">
+                                <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IXi-Zl-itB" appends="YES" id="Q4Z-Hi-P0N"/>
+                                    <outletCollection property="gestureRecognizers" destination="D8T-at-ib9" appends="YES" id="pHZ-HO-Wag"/>
+                                    <outletCollection property="gestureRecognizers" destination="oKg-mj-5FA" appends="YES" id="YGO-zJ-gk9"/>
+                                    <outletCollection property="gestureRecognizers" destination="QW2-pi-KxY" appends="YES" id="e1i-9e-G3B"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-aA-3dg">
+                                <rect key="frame" x="71" y="557" width="459" height="35"/>
+                                <string key="text">Long press to reset. Pinch to resize. Pan to drag. Rotate to rotate. Swipe up to add another. Swipe down to remove one. Tap to change the color.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rvK-HQ-ivS" appends="YES" id="Si0-RU-qBo"/>
+                            <outletCollection property="gestureRecognizers" destination="gXI-L4-3ng" appends="YES" id="f7h-oT-PqG"/>
+                            <outletCollection property="gestureRecognizers" destination="ZXB-dc-nHa" appends="YES" id="Dhr-dO-u3V"/>
+                            <outletCollection property="gestureRecognizers" destination="JmN-zC-nTT" appends="YES" id="nEi-Dp-QoK"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="wIL-Bv-zlF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Lf-yn-uWV" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IXi-Zl-itB"/>
+                <pinchGestureRecognizer id="D8T-at-ib9"/>
+                <rotationGestureRecognizer id="oKg-mj-5FA"/>
+                <swipeGestureRecognizer direction="right" id="rvK-HQ-ivS"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="QW2-pi-KxY"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gXI-L4-3ng"/>
+                <swipeGestureRecognizer direction="right" id="ZXB-dc-nHa"/>
+                <swipeGestureRecognizer direction="right" id="JmN-zC-nTT"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="1521"/>
+        </scene>
+        <!--Accelerometer-->
+        <scene sceneID="VHz-rq-g72">
+            <objects>
+                <viewController title="Accelerometer" id="UO8-2f-Y9W" customClass="DetailViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V8X-2j-6XO"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXh-nx-9fL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zgB-lY-2Od">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-31-dYX">
+                                <rect key="frame" x="277" y="351" width="32" height="30"/>
+                                <state key="normal" title="Zero">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e8I-gb-FZR">
+                                <rect key="frame" x="269" y="561" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable FUNctionality" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-Ae-qlF">
+                                <rect key="frame" x="220" y="532" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXv-sC-CnS">
+                                <rect key="frame" x="157" y="271" width="9" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D41-Oa-YF0">
+                                <rect key="frame" x="289" y="271" width="9" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbt-y5-bAz">
+                                <rect key="frame" x="426" y="271" width="9" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-8U-abj">
+                                <rect key="frame" x="140" y="300" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-t6-15B">
+                                <rect key="frame" x="272" y="300" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC5-rt-o5G">
+                                <rect key="frame" x="409" y="300" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="aO4-lj-PXZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TnD-xi-zde" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="2247"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="GIo-R1-koI"/>
     </inferredMetricsTieBreakers>
 </document>
