@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		71B3F48B1B4ACD640021E73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F48A1B4ACD640021E73B /* AppDelegate.swift */; };
-		71B3F48D1B4ACD640021E73B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F48C1B4ACD640021E73B /* MasterViewController.swift */; };
-		71B3F48F1B4ACD640021E73B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F48E1B4ACD640021E73B /* DetailViewController.swift */; };
 		71B3F4921B4ACD640021E73B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B3F4901B4ACD640021E73B /* Main.storyboard */; };
 		71B3F4941B4ACD640021E73B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B3F4931B4ACD640021E73B /* Images.xcassets */; };
 		71B3F4971B4ACD640021E73B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B3F4951B4ACD640021E73B /* LaunchScreen.xib */; };
 		71B3F4A31B4ACD640021E73B /* SwiftComponentsTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4A21B4ACD640021E73B /* SwiftComponentsTourTests.swift */; };
+		71B3F4B01B4AE87C0021E73B /* NIOMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4AE1B4AE87C0021E73B /* NIOMasterViewController.swift */; };
+		71B3F4B41B4AE9FF0021E73B /* NIOLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4B31B4AE9FF0021E73B /* NIOLabelViewController.swift */; };
+		71B3F4B61B4AEA170021E73B /* NIOTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4B51B4AEA170021E73B /* NIOTextFieldViewController.swift */; };
+		71B3F4B81B4AEA220021E73B /* NIOTextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4B71B4AEA220021E73B /* NIOTextViewViewController.swift */; };
+		71B3F4BA1B4AEA360021E73B /* NIOButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4B91B4AEA360021E73B /* NIOButtonViewController.swift */; };
+		71B3F4BC1B4AEA3E0021E73B /* NIOSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4BB1B4AEA3E0021E73B /* NIOSwitchViewController.swift */; };
+		71B3F4BE1B4AEA4F0021E73B /* NIOSegmentedControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4BD1B4AEA4F0021E73B /* NIOSegmentedControlViewController.swift */; };
+		71B3F4C01B4AEA570021E73B /* NIOStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4BF1B4AEA570021E73B /* NIOStepperViewController.swift */; };
+		71B3F4C21B4AEA650021E73B /* NIOSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C11B4AEA650021E73B /* NIOSliderViewController.swift */; };
+		71B3F4C41B4AEA780021E73B /* NIOProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C31B4AEA780021E73B /* NIOProgressViewController.swift */; };
+		71B3F4C61B4AEA810021E73B /* NIOPickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C51B4AEA810021E73B /* NIOPickersViewController.swift */; };
+		71B3F4C81B4AEA900021E73B /* NIOGesturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C71B4AEA900021E73B /* NIOGesturesViewController.swift */; };
+		71B3F4CA1B4AEA9B0021E73B /* NIOAccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C91B4AEA9B0021E73B /* NIOAccelerometerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +41,25 @@
 		71B3F4851B4ACD640021E73B /* SwiftComponentsTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftComponentsTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B3F4891B4ACD640021E73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71B3F48A1B4ACD640021E73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71B3F48C1B4ACD640021E73B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		71B3F48E1B4ACD640021E73B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		71B3F4911B4ACD640021E73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71B3F4931B4ACD640021E73B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		71B3F4931B4ACD640021E73B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		71B3F4961B4ACD640021E73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		71B3F49C1B4ACD640021E73B /* SwiftComponentsTourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftComponentsTourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B3F4A11B4ACD640021E73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71B3F4A21B4ACD640021E73B /* SwiftComponentsTourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftComponentsTourTests.swift; sourceTree = "<group>"; };
+		71B3F4AE1B4AE87C0021E73B /* NIOMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOMasterViewController.swift; sourceTree = "<group>"; };
+		71B3F4B31B4AE9FF0021E73B /* NIOLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOLabelViewController.swift; sourceTree = "<group>"; };
+		71B3F4B51B4AEA170021E73B /* NIOTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOTextFieldViewController.swift; sourceTree = "<group>"; };
+		71B3F4B71B4AEA220021E73B /* NIOTextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOTextViewViewController.swift; sourceTree = "<group>"; };
+		71B3F4B91B4AEA360021E73B /* NIOButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOButtonViewController.swift; sourceTree = "<group>"; };
+		71B3F4BB1B4AEA3E0021E73B /* NIOSwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOSwitchViewController.swift; sourceTree = "<group>"; };
+		71B3F4BD1B4AEA4F0021E73B /* NIOSegmentedControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOSegmentedControlViewController.swift; sourceTree = "<group>"; };
+		71B3F4BF1B4AEA570021E73B /* NIOStepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOStepperViewController.swift; sourceTree = "<group>"; };
+		71B3F4C11B4AEA650021E73B /* NIOSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOSliderViewController.swift; sourceTree = "<group>"; };
+		71B3F4C31B4AEA780021E73B /* NIOProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOProgressViewController.swift; sourceTree = "<group>"; };
+		71B3F4C51B4AEA810021E73B /* NIOPickersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOPickersViewController.swift; sourceTree = "<group>"; };
+		71B3F4C71B4AEA900021E73B /* NIOGesturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOGesturesViewController.swift; sourceTree = "<group>"; };
+		71B3F4C91B4AEA9B0021E73B /* NIOAccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOAccelerometerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				71B3F48A1B4ACD640021E73B /* AppDelegate.swift */,
-				71B3F48C1B4ACD640021E73B /* MasterViewController.swift */,
-				71B3F48E1B4ACD640021E73B /* DetailViewController.swift */,
-				71B3F4901B4ACD640021E73B /* Main.storyboard */,
-				71B3F4931B4ACD640021E73B /* Images.xcassets */,
-				71B3F4951B4ACD640021E73B /* LaunchScreen.xib */,
+				71B3F4AC1B4AE87C0021E73B /* ViewController */,
+				71B3F4B11B4AE88E0021E73B /* Assets */,
 				71B3F4881B4ACD640021E73B /* Supporting Files */,
 			);
 			path = SwiftComponentsTour;
@@ -113,6 +132,44 @@
 				71B3F4A11B4ACD640021E73B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71B3F4AC1B4AE87C0021E73B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71B3F4B21B4AE8F00021E73B /* Detail */,
+				71B3F4AE1B4AE87C0021E73B /* NIOMasterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		71B3F4B11B4AE88E0021E73B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				71B3F4901B4ACD640021E73B /* Main.storyboard */,
+				71B3F4951B4ACD640021E73B /* LaunchScreen.xib */,
+				71B3F4931B4ACD640021E73B /* Images.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		71B3F4B21B4AE8F00021E73B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				71B3F4B31B4AE9FF0021E73B /* NIOLabelViewController.swift */,
+				71B3F4B51B4AEA170021E73B /* NIOTextFieldViewController.swift */,
+				71B3F4B71B4AEA220021E73B /* NIOTextViewViewController.swift */,
+				71B3F4B91B4AEA360021E73B /* NIOButtonViewController.swift */,
+				71B3F4BB1B4AEA3E0021E73B /* NIOSwitchViewController.swift */,
+				71B3F4BD1B4AEA4F0021E73B /* NIOSegmentedControlViewController.swift */,
+				71B3F4BF1B4AEA570021E73B /* NIOStepperViewController.swift */,
+				71B3F4C11B4AEA650021E73B /* NIOSliderViewController.swift */,
+				71B3F4C31B4AEA780021E73B /* NIOProgressViewController.swift */,
+				71B3F4C51B4AEA810021E73B /* NIOPickersViewController.swift */,
+				71B3F4C71B4AEA900021E73B /* NIOGesturesViewController.swift */,
+				71B3F4C91B4AEA9B0021E73B /* NIOAccelerometerViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +216,9 @@
 		71B3F47D1B4ACD640021E73B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NIO;
 				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = "Kyle Roberts";
+				ORGANIZATIONNAME = nimblenoggin.io;
 				TargetAttributes = {
 					71B3F4841B4ACD640021E73B = {
 						CreatedOnToolsVersion = 6.4;
@@ -215,9 +273,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B3F48F1B4ACD640021E73B /* DetailViewController.swift in Sources */,
-				71B3F48D1B4ACD640021E73B /* MasterViewController.swift in Sources */,
+				71B3F4C81B4AEA900021E73B /* NIOGesturesViewController.swift in Sources */,
 				71B3F48B1B4ACD640021E73B /* AppDelegate.swift in Sources */,
+				71B3F4C01B4AEA570021E73B /* NIOStepperViewController.swift in Sources */,
+				71B3F4C21B4AEA650021E73B /* NIOSliderViewController.swift in Sources */,
+				71B3F4BA1B4AEA360021E73B /* NIOButtonViewController.swift in Sources */,
+				71B3F4B41B4AE9FF0021E73B /* NIOLabelViewController.swift in Sources */,
+				71B3F4BC1B4AEA3E0021E73B /* NIOSwitchViewController.swift in Sources */,
+				71B3F4BE1B4AEA4F0021E73B /* NIOSegmentedControlViewController.swift in Sources */,
+				71B3F4C41B4AEA780021E73B /* NIOProgressViewController.swift in Sources */,
+				71B3F4B61B4AEA170021E73B /* NIOTextFieldViewController.swift in Sources */,
+				71B3F4B01B4AE87C0021E73B /* NIOMasterViewController.swift in Sources */,
+				71B3F4B81B4AEA220021E73B /* NIOTextViewViewController.swift in Sources */,
+				71B3F4C61B4AEA810021E73B /* NIOPickersViewController.swift in Sources */,
+				71B3F4CA1B4AEA9B0021E73B /* NIOAccelerometerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +315,7 @@
 				71B3F4911B4ACD640021E73B /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		71B3F4951B4ACD640021E73B /* LaunchScreen.xib */ = {
@@ -254,6 +324,7 @@
 				71B3F4961B4ACD640021E73B /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  NIOMasterViewController.swift
 //  SwiftComponentsTour
 //
 //  Created by Kyle Roberts on 7/6/15.
@@ -8,11 +8,8 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
-
-    var detailViewController: DetailViewController? = nil
+class NIOMasterViewController: UITableViewController {
     var objects = [AnyObject]()
-
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +22,6 @@ class MasterViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let controllers = self.splitViewController!.viewControllers
-        self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
     }
     
     // MARK: - Segues
@@ -34,10 +30,10 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
+//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+//                controller.detailItem = object
+//                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+//                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
