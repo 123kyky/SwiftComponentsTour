@@ -96,7 +96,7 @@ class NIOTextFieldViewController: UIViewController, UITextFieldDelegate {
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        self.bottomConstraint.constant = 20
+        self.bottomConstraint.constant = 115
         UIView.animateWithDuration(notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double, animations: { () -> Void in
             self.view.layoutIfNeeded()
         })
