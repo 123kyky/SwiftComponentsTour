@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hDO-Go-tTl" kind="relationship" relationship="rootViewController" id="0iU-ZR-22E"/>
+                        <segue destination="eV1-GA-ZDj" kind="relationship" relationship="rootViewController" id="gCC-iF-8lL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -582,38 +582,79 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9xC-nO-vtO">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9xC-nO-vtO">
                                 <rect key="frame" x="276" y="159" width="51" height="31"/>
+                                <connections>
+                                    <action selector="spotlightsToggled:" destination="eV1-GA-ZDj" eventType="valueChanged" id="1ZV-Go-XYy"/>
+                                </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-mZ-pnT">
-                                <rect key="frame" x="277" y="130" width="47" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N41-Bv-nMj">
+                                <rect key="frame" x="257" y="481" width="86" height="30"/>
+                                <state key="normal" title="House lights">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="houseLightsToggled:" destination="eV1-GA-ZDj" eventType="touchUpInside" id="c6h-YY-EcV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="c61-1A-2VQ">
+                                <rect key="frame" x="0.0" y="236" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="47" id="VbW-En-yAn"/>
-                                    <constraint firstAttribute="height" constant="21" id="cmm-tS-b6e"/>
+                                    <constraint firstAttribute="width" constant="240" id="Hu5-pg-hFP"/>
+                                    <constraint firstAttribute="height" constant="128" id="r0G-eo-0lM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="yyU-le-r4A">
+                                <rect key="frame" x="360" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8Jv-0j-yfI"/>
+                                    <constraint firstAttribute="width" constant="240" id="hBF-uO-nlh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-mZ-pnT">
+                                <rect key="frame" x="262" y="130" width="77" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="j9P-gx-Itv"/>
+                                    <constraint firstAttribute="width" constant="77" id="teK-Li-6ii"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N41-Bv-nMj">
-                                <rect key="frame" x="258" y="481" width="84" height="30"/>
-                                <state key="normal" title="High Beams">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="N41-Bv-nMj" firstAttribute="centerX" secondItem="9xC-nO-vtO" secondAttribute="centerX" id="6Cq-Cs-acq"/>
-                            <constraint firstItem="CgI-mZ-pnT" firstAttribute="top" secondItem="miv-e0-qD3" secondAttribute="bottom" constant="66" id="VeG-8M-xe6"/>
-                            <constraint firstItem="CgI-mZ-pnT" firstAttribute="centerX" secondItem="9xC-nO-vtO" secondAttribute="centerX" id="hX5-Xd-4cT"/>
-                            <constraint firstItem="HgN-gR-BoQ" firstAttribute="top" secondItem="N41-Bv-nMj" secondAttribute="bottom" constant="89" id="pxJ-cE-qg7"/>
-                            <constraint firstItem="9xC-nO-vtO" firstAttribute="centerX" secondItem="qXn-ER-OSF" secondAttribute="centerX" id="rom-Zz-jYr"/>
-                            <constraint firstItem="9xC-nO-vtO" firstAttribute="top" secondItem="CgI-mZ-pnT" secondAttribute="bottom" constant="8" symbolic="YES" id="tcx-Me-l99"/>
+                            <constraint firstItem="9xC-nO-vtO" firstAttribute="top" secondItem="CgI-mZ-pnT" secondAttribute="bottom" constant="8" symbolic="YES" id="7F8-SP-GQT"/>
+                            <constraint firstAttribute="centerX" secondItem="c61-1A-2VQ" secondAttribute="centerX" id="E15-fE-k0X"/>
+                            <constraint firstItem="HgN-gR-BoQ" firstAttribute="top" secondItem="N41-Bv-nMj" secondAttribute="bottom" constant="89" id="E6L-EN-tkJ"/>
+                            <constraint firstAttribute="centerY" secondItem="yyU-le-r4A" secondAttribute="centerY" id="MZs-au-3QN"/>
+                            <constraint firstItem="c61-1A-2VQ" firstAttribute="top" secondItem="yyU-le-r4A" secondAttribute="top" id="Uhp-Vi-Z3F"/>
+                            <constraint firstItem="CgI-mZ-pnT" firstAttribute="centerX" secondItem="9xC-nO-vtO" secondAttribute="centerX" id="YWS-8g-q3H"/>
+                            <constraint firstItem="c61-1A-2VQ" firstAttribute="leading" secondItem="qXn-ER-OSF" secondAttribute="leading" id="ZJc-gq-YcD"/>
+                            <constraint firstItem="N41-Bv-nMj" firstAttribute="centerX" secondItem="9xC-nO-vtO" secondAttribute="centerX" id="bqE-2f-Xxz"/>
+                            <constraint firstAttribute="centerY" secondItem="c61-1A-2VQ" secondAttribute="centerY" id="eSW-sA-avi"/>
+                            <constraint firstAttribute="trailing" secondItem="yyU-le-r4A" secondAttribute="trailing" id="fTe-3e-7E4"/>
+                            <constraint firstItem="c61-1A-2VQ" firstAttribute="bottom" secondItem="yyU-le-r4A" secondAttribute="bottom" id="gxC-dU-Lsi"/>
+                            <constraint firstItem="CgI-mZ-pnT" firstAttribute="top" secondItem="miv-e0-qD3" secondAttribute="bottom" constant="66" id="vft-7c-VWc"/>
+                            <constraint firstItem="CgI-mZ-pnT" firstAttribute="centerX" secondItem="qXn-ER-OSF" secondAttribute="centerX" id="xxh-dJ-l8v"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="E15-fE-k0X"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="XHq-N7-AFn"/>
+                    <connections>
+                        <outlet property="brightsButton" destination="N41-Bv-nMj" id="M8L-xp-v7E"/>
+                        <outlet property="leftSpotlight" destination="c61-1A-2VQ" id="Ecm-iG-bD6"/>
+                        <outlet property="leftSpotlightLeftConstraint" destination="ZJc-gq-YcD" id="Jrp-8s-bZG"/>
+                        <outlet property="lightSwitch" destination="9xC-nO-vtO" id="uy0-09-iOc"/>
+                        <outlet property="lightsLabel" destination="CgI-mZ-pnT" id="KvR-Hu-If8"/>
+                        <outlet property="rightSpotlight" destination="yyU-le-r4A" id="xUR-VZ-qcJ"/>
+                        <outlet property="rightSpotlightRightConstraint" destination="fTe-3e-7E4" id="OPV-BP-8gw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-zN-y6z" sceneMemberID="firstResponder"/>
             </objects>
@@ -943,4 +984,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
             <point key="canvasLocation" x="2058" y="2247"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spotlight" width="600" height="404"/>
+    </resources>
 </document>
