@@ -10,26 +10,18 @@ import UIKit
 
 class NIOLabelViewController: UIViewController {
 
+    @IBOutlet weak var attributedLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let font: UIFont = UIFont(name: "Georgia", size: 24)!
+        var attributedString: NSMutableAttributedString = NSMutableAttributedString(string: self.attributedLabel.text!)
+        attributedString.addAttributes([NSStrikethroughStyleAttributeName : 2], range: NSMakeRange(7, 4))
+        attributedString.addAttributes([NSFontAttributeName : font], range: NSMakeRange(12, 7))
+        attributedString.addAttributes([NSForegroundColorAttributeName : UIColor.redColor()], range: NSMakeRange(20, 4))
+        attributedString.addAttributes([NSObliquenessAttributeName : 0.5], range: NSMakeRange(25, 4))
+        attributedLabel.attributedText = attributedString
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
