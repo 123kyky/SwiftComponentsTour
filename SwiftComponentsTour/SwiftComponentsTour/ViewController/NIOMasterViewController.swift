@@ -35,7 +35,6 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         // Do any additional  setup after loading the view, typically from a nib.
         
         self.splitViewController!.delegate = self
-        NSLog("\(self.splitViewController!)")
     }
 
     // MARK: - Table View
