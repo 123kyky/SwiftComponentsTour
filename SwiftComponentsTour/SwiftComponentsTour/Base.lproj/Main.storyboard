@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZF7-6r-DWN" kind="relationship" relationship="rootViewController" id="wZn-r8-Uzc"/>
+                        <segue destination="hDO-Go-tTl" kind="relationship" relationship="rootViewController" id="0iU-ZR-22E"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -379,18 +379,27 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <state key="normal" title="Randomize background color">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="randomizeBackgroundColor:" destination="hDO-Go-tTl" eventType="touchUpInside" id="l0y-iQ-r5I"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAH-L2-hgA">
                                 <rect key="frame" x="259" y="429" width="83" height="30"/>
                                 <state key="normal" title="Change title">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeTitle:" destination="hDO-Go-tTl" eventType="touchUpInside" id="koP-d7-Pyk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-Oe-ggk">
                                 <rect key="frame" x="220" y="361" width="161" height="30"/>
                                 <state key="normal" title="Add background image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addBackgroundImage:" destination="hDO-Go-tTl" eventType="touchUpInside" id="Ylz-dA-oM3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

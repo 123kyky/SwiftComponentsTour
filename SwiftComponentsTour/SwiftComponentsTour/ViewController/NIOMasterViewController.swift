@@ -79,6 +79,7 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         (splitViewController!.viewControllers.last as! UINavigationController).setViewControllers([controller!], animated: true)
         controller!.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
         controller!.navigationItem.leftItemsSupplementBackButton = true
+        controller!.title = sections[indexPath.section][indexPath.row]
     }
 
 }
