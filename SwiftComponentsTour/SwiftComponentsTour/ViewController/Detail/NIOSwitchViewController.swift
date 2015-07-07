@@ -10,8 +10,8 @@ import UIKit
 
 class NIOSwitchViewController: UIViewController {
 
-    @IBOutlet weak var lightSwitch: UISwitch!
-    @IBOutlet weak var brightsButton: UIButton!
+    @IBOutlet weak var spotlightSwitch: UISwitch!
+    @IBOutlet weak var houseLightsSwitch: UIButton!
     @IBOutlet weak var lightsLabel: UILabel!
     
     @IBOutlet weak var leftSpotlight: UIImageView!
@@ -22,7 +22,7 @@ class NIOSwitchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.brightsButton.selected = false
+        self.houseLightsSwitch.selected = false
         self.lightsLabel.layer.shadowOpacity = 1
         self.lightsLabel.layer.shadowRadius = 6
         self.lightsLabel.layer.shadowColor = UIColor.whiteColor().CGColor
@@ -35,7 +35,7 @@ class NIOSwitchViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func spotlightsToggled(sender: AnyObject) {
-        if self.lightSwitch.on {
+        if self.spotlightSwitch.on {
             self.turnOnSpotlights()
         } else {
             self.turnOffSpotlights()
@@ -43,11 +43,11 @@ class NIOSwitchViewController: UIViewController {
     }
 
     @IBAction func houseLightsToggled(sender: AnyObject) {
-        if self.brightsButton.selected {
-            self.brightsButton.selected = false
+        if self.houseLightsSwitch.selected {
+            self.houseLightsSwitch.selected = false
             self.turnOffHouseLights()
         } else {
-            self.brightsButton.selected = true
+            self.houseLightsSwitch.selected = true
             self.turnOnHouseLights()
         }
     }
@@ -55,7 +55,7 @@ class NIOSwitchViewController: UIViewController {
     // MARK: - Animations
     
     func turnOnSpotlights() {
-        if self.brightsButton.selected {
+        if self.houseLightsSwitch.selected {
             self.houseLightsToggled(self)
         }
         
@@ -73,7 +73,7 @@ class NIOSwitchViewController: UIViewController {
         
         UIView .animateWithDuration(0.75, animations: { () -> Void in
             self.view.layoutIfNeeded()
-            self.lightSwitch.on = false
+            self.spotlightSwitch.on = false
         })
     }
     

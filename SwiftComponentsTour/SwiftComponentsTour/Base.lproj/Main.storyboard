@@ -40,7 +40,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fpl-jB-Jbd">
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fpl-jB-Jbd">
                                 <rect key="frame" x="148" y="113" width="305" height="82"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="eV1-GA-ZDj" kind="relationship" relationship="rootViewController" id="gCC-iF-8lL"/>
+                        <segue destination="0P3-d7-twk" kind="relationship" relationship="rootViewController" id="EOz-7l-l0j"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,7 +258,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QO-Ig-FrQ">
                                 <rect key="frame" x="16" y="20" width="568" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Do commanded an shameless we disposing do. Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet. Remainder provision an in intention. Saw supported too joy promotion engrossed propriety. Me till like it sure no sons.
+                                <string key="text">Do commanded an shameless we disposing do. Indulgence ten remarkably nor are impression out. Power is lived means oh every in we quiet. Remainder provision an in intention. Saw supported too joy promotion engrossed propriety. Me till like it sure no sons.
 
 Tiled say decay spoil now walls meant house. My mr interest thoughts screened of outweigh removing. Evening society musical besides inhabit ye my. Lose hill well up will he over on. Increasing sufficient everything men him admiration unpleasing sex. Around really his use uneasy longer him man. His our pulled nature elinor talked now for excuse result. Admitted add peculiar get joy doubtful.
 
@@ -336,7 +336,7 @@ Carried nothing on am warrant towards. Polite in of in oh needed itself silent c
 
 His having within saw become ask passed misery giving. Recommend questions get too fulfilled. He fact in we case miss sake. Entrance be throwing he do blessing up. Hearts warmth in genius do garden advice mr it garret. Collected preserved are middleton dependent residence but him how. Handsome weddings yet mrs you has carriage packages. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity had men speaking met. Rich deal mrs part led pure will but.
 
-Detract yet delight written farther his general. If in so bred at dare rose lose good. Feel and make two real miss use easy. Celebrated delightful an especially increasing instrument am. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Latter remark hunted enough vulgar say man. Sitting hearted on it without me.</mutableString>
+Detract yet delight written farther his general. If in so bred at dare rose lose good. Feel and make two real miss use easy. Celebrated delightful an especially increasing instrument am. Indulgence contrasted sufficient to unpleasant in in insensible favourable. Latter remark hunted enough vulgar say man. Sitting hearted on it without me.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
@@ -488,7 +488,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCd-l4-1CX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="1521"/>
+            <point key="canvasLocation" x="1374" y="2247"/>
         </scene>
         <!--Stepper-->
         <scene sceneID="h9Z-jc-Dfy">
@@ -568,7 +568,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM3-oq-49f" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="2247"/>
+            <point key="canvasLocation" x="1374" y="2985"/>
         </scene>
         <!--Switch-->
         <scene sceneID="uJr-wJ-saR">
@@ -582,7 +582,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9xC-nO-vtO">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9xC-nO-vtO">
                                 <rect key="frame" x="276" y="159" width="51" height="31"/>
                                 <connections>
                                     <action selector="spotlightsToggled:" destination="eV1-GA-ZDj" eventType="valueChanged" id="1ZV-Go-XYy"/>
@@ -611,7 +611,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                     <constraint firstAttribute="width" constant="240" id="hBF-uO-nlh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-mZ-pnT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spotlights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-mZ-pnT">
                                 <rect key="frame" x="262" y="130" width="77" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="j9P-gx-Itv"/>
@@ -626,7 +626,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <constraints>
                             <constraint firstItem="9xC-nO-vtO" firstAttribute="top" secondItem="CgI-mZ-pnT" secondAttribute="bottom" constant="8" symbolic="YES" id="7F8-SP-GQT"/>
                             <constraint firstAttribute="centerX" secondItem="c61-1A-2VQ" secondAttribute="centerX" id="E15-fE-k0X"/>
-                            <constraint firstItem="HgN-gR-BoQ" firstAttribute="top" secondItem="N41-Bv-nMj" secondAttribute="bottom" constant="89" id="E6L-EN-tkJ"/>
+                            <constraint firstItem="CgI-mZ-pnT" firstAttribute="top" secondItem="miv-e0-qD3" secondAttribute="bottom" constant="66" id="Eki-lN-jM1"/>
                             <constraint firstAttribute="centerY" secondItem="yyU-le-r4A" secondAttribute="centerY" id="MZs-au-3QN"/>
                             <constraint firstItem="c61-1A-2VQ" firstAttribute="top" secondItem="yyU-le-r4A" secondAttribute="top" id="Uhp-Vi-Z3F"/>
                             <constraint firstItem="CgI-mZ-pnT" firstAttribute="centerX" secondItem="9xC-nO-vtO" secondAttribute="centerX" id="YWS-8g-q3H"/>
@@ -634,8 +634,8 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstItem="N41-Bv-nMj" firstAttribute="centerX" secondItem="9xC-nO-vtO" secondAttribute="centerX" id="bqE-2f-Xxz"/>
                             <constraint firstAttribute="centerY" secondItem="c61-1A-2VQ" secondAttribute="centerY" id="eSW-sA-avi"/>
                             <constraint firstAttribute="trailing" secondItem="yyU-le-r4A" secondAttribute="trailing" id="fTe-3e-7E4"/>
+                            <constraint firstItem="HgN-gR-BoQ" firstAttribute="top" secondItem="N41-Bv-nMj" secondAttribute="bottom" constant="89" id="gZb-pb-5g4"/>
                             <constraint firstItem="c61-1A-2VQ" firstAttribute="bottom" secondItem="yyU-le-r4A" secondAttribute="bottom" id="gxC-dU-Lsi"/>
-                            <constraint firstItem="CgI-mZ-pnT" firstAttribute="top" secondItem="miv-e0-qD3" secondAttribute="bottom" constant="66" id="vft-7c-VWc"/>
                             <constraint firstItem="CgI-mZ-pnT" firstAttribute="centerX" secondItem="qXn-ER-OSF" secondAttribute="centerX" id="xxh-dJ-l8v"/>
                         </constraints>
                         <variation key="default">
@@ -647,13 +647,13 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="XHq-N7-AFn"/>
                     <connections>
-                        <outlet property="brightsButton" destination="N41-Bv-nMj" id="M8L-xp-v7E"/>
+                        <outlet property="houseLightsSwitch" destination="N41-Bv-nMj" id="qyn-T7-ngY"/>
                         <outlet property="leftSpotlight" destination="c61-1A-2VQ" id="Ecm-iG-bD6"/>
                         <outlet property="leftSpotlightLeftConstraint" destination="ZJc-gq-YcD" id="Jrp-8s-bZG"/>
-                        <outlet property="lightSwitch" destination="9xC-nO-vtO" id="uy0-09-iOc"/>
                         <outlet property="lightsLabel" destination="CgI-mZ-pnT" id="KvR-Hu-If8"/>
                         <outlet property="rightSpotlight" destination="yyU-le-r4A" id="xUR-VZ-qcJ"/>
                         <outlet property="rightSpotlightRightConstraint" destination="fTe-3e-7E4" id="OPV-BP-8gw"/>
+                        <outlet property="spotlightSwitch" destination="9xC-nO-vtO" id="oWf-Wd-Dpm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhQ-zN-y6z" sceneMemberID="firstResponder"/>
@@ -672,37 +672,93 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oTT-5S-MRV">
-                                <rect key="frame" x="193" y="101" width="215" height="29"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="Cye-U3-SsB">
+                                <rect key="frame" x="0.0" y="236" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="215" id="RFi-3p-OaB"/>
+                                    <constraint firstAttribute="height" constant="128" id="C4P-oa-j7i"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="HMB-9D-ilC"/>
+                                    <constraint firstAttribute="width" constant="240" id="I8C-Te-JnG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="coB-Kh-Apc"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="Volume"/>
-                                    <segment title="Brightness"/>
-                                </segments>
-                            </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H1H-z4-8rP">
-                                <rect key="frame" x="164" y="147" width="273" height="31"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="iK5-M7-ar2">
+                                <rect key="frame" x="360" y="236" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="269" id="Udi-YM-2Qy"/>
+                                    <constraint firstAttribute="height" constant="128" id="kp7-h7-9WU"/>
+                                    <constraint firstAttribute="width" constant="240" id="sSY-wj-iPG"/>
                                 </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PN-hu-vxY">
+                                <rect key="frame" x="262" y="137" width="77" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LKm-fv-NTc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6fT-GB-CTG">
+                                <rect key="frame" x="204" y="535" width="191" height="31"/>
+                                <connections>
+                                    <action selector="houseLightsSliderDidChange:" destination="0P3-d7-twk" eventType="valueChanged" id="Dzf-4r-iTd"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Lights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afh-Wk-FhB">
+                                <rect key="frame" x="250" y="506" width="101" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Zh1-oK-0ui"/>
+                                    <constraint firstAttribute="width" constant="101" id="dTb-Hm-vcN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xIO-ut-Qad">
+                                <rect key="frame" x="204" y="166" width="191" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="sHg-3r-iph"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="spotlightsSliderDidChange:" destination="0P3-d7-twk" eventType="valueChanged" id="ayg-U8-rBJ"/>
+                                </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oTT-5S-MRV" firstAttribute="top" secondItem="cxq-kQ-3Tr" secondAttribute="bottom" constant="37" id="3kW-pd-wbw"/>
-                            <constraint firstItem="oTT-5S-MRV" firstAttribute="centerX" secondItem="Wky-OC-Yz4" secondAttribute="centerX" id="M8X-0P-ZEU"/>
-                            <constraint firstItem="H1H-z4-8rP" firstAttribute="top" secondItem="oTT-5S-MRV" secondAttribute="bottom" constant="18" id="MlH-03-rkh"/>
-                            <constraint firstItem="H1H-z4-8rP" firstAttribute="centerX" secondItem="oTT-5S-MRV" secondAttribute="centerX" id="akC-1E-DZT"/>
+                            <constraint firstAttribute="centerY" secondItem="Cye-U3-SsB" secondAttribute="centerY" id="9k4-Rj-ntZ"/>
+                            <constraint firstItem="Cye-U3-SsB" firstAttribute="top" secondItem="iK5-M7-ar2" secondAttribute="top" id="BbN-QH-n4d"/>
+                            <constraint firstItem="6fT-GB-CTG" firstAttribute="top" secondItem="Afh-Wk-FhB" secondAttribute="bottom" constant="8" symbolic="YES" id="MwU-5o-brs"/>
+                            <constraint firstAttribute="centerX" secondItem="xIO-ut-Qad" secondAttribute="centerX" id="Z4i-qU-Ni9"/>
+                            <constraint firstAttribute="trailing" secondItem="iK5-M7-ar2" secondAttribute="trailing" id="ZhA-DV-jX8"/>
+                            <constraint firstItem="9PN-hu-vxY" firstAttribute="centerX" secondItem="Wky-OC-Yz4" secondAttribute="centerX" id="aeI-wE-Q0b"/>
+                            <constraint firstAttribute="centerY" secondItem="iK5-M7-ar2" secondAttribute="centerY" id="eS8-hP-4qz"/>
+                            <constraint firstItem="Cye-U3-SsB" firstAttribute="leading" secondItem="Wky-OC-Yz4" secondAttribute="leadingMargin" constant="-16" id="fXp-es-uRT"/>
+                            <constraint firstItem="9PN-hu-vxY" firstAttribute="centerX" secondItem="Afh-Wk-FhB" secondAttribute="centerX" id="h5M-ku-QVw"/>
+                            <constraint firstItem="xIO-ut-Qad" firstAttribute="leading" secondItem="6fT-GB-CTG" secondAttribute="leading" id="heL-JN-ASK"/>
+                            <constraint firstItem="6fT-GB-CTG" firstAttribute="trailing" secondItem="xIO-ut-Qad" secondAttribute="trailing" id="lEC-Gj-qaH"/>
+                            <constraint firstItem="iK5-M7-ar2" firstAttribute="top" secondItem="xIO-ut-Qad" secondAttribute="bottom" constant="41" id="nRS-Ho-89p"/>
+                            <constraint firstItem="xIO-ut-Qad" firstAttribute="top" secondItem="9PN-hu-vxY" secondAttribute="bottom" constant="8" symbolic="YES" id="seZ-rL-fYY"/>
+                            <constraint firstItem="iK5-M7-ar2" firstAttribute="bottom" secondItem="Cye-U3-SsB" secondAttribute="bottom" id="x0j-mY-20V"/>
+                            <constraint firstItem="pdq-iT-WcK" firstAttribute="top" secondItem="6fT-GB-CTG" secondAttribute="bottom" constant="35" id="y5I-tv-iZK"/>
+                            <constraint firstItem="9PN-hu-vxY" firstAttribute="top" secondItem="cxq-kQ-3Tr" secondAttribute="bottom" constant="73" id="yhA-Ry-uZn"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="Dqd-Fk-kRp"/>
+                    <connections>
+                        <outlet property="houseLightsLabel" destination="Afh-Wk-FhB" id="5rM-5J-g64"/>
+                        <outlet property="houseLightsSlider" destination="6fT-GB-CTG" id="Zbs-YH-VNM"/>
+                        <outlet property="leftSpotlight" destination="Cye-U3-SsB" id="aIq-cK-OMA"/>
+                        <outlet property="leftSpotlightLeftConstraint" destination="fXp-es-uRT" id="1UA-5g-RO2"/>
+                        <outlet property="lightsLabel" destination="9PN-hu-vxY" id="s03-GM-XM2"/>
+                        <outlet property="rightSpotlight" destination="iK5-M7-ar2" id="rvK-ee-XFI"/>
+                        <outlet property="rightSpotlightRightConstraint" destination="ZhA-DV-jX8" id="hTI-Ud-O50"/>
+                        <outlet property="spotlightsSlider" destination="xIO-ut-Qad" id="BIa-bR-Vd8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frX-Kx-DDf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="2946"/>
+            <point key="canvasLocation" x="1374" y="1521"/>
         </scene>
         <!--Progress and Activity-->
         <scene sceneID="Hxm-4v-0ER">
