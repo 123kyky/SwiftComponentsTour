@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="HLN-CR-j2f" kind="relationship" relationship="rootViewController" id="LPv-uo-1e8"/>
+                        <segue destination="qAz-Ur-KXd" kind="relationship" relationship="rootViewController" id="LFA-Hg-YP3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -431,10 +431,6 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Qm-c0f">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-XF-0Ro">
                                 <rect key="frame" x="281" y="115" width="39" height="21"/>
                                 <constraints>
@@ -480,6 +476,10 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                     <action selector="mixSegmentDidChange:" destination="HLN-CR-j2f" eventType="valueChanged" id="SaG-Yf-dJJ"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Qm-c0f">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -487,7 +487,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstItem="aho-iv-Jfo" firstAttribute="centerX" secondItem="cJg-Ji-dYy" secondAttribute="centerX" id="5Sb-CO-2pr"/>
                             <constraint firstItem="WXD-Qm-c0f" firstAttribute="bottom" secondItem="c1y-2u-Xce" secondAttribute="top" id="6mM-ib-DFb"/>
                             <constraint firstItem="aho-iv-Jfo" firstAttribute="leading" secondItem="gvG-SF-Aee" secondAttribute="leading" id="6rx-WM-dMI"/>
-                            <constraint firstItem="af5-XF-0Ro" firstAttribute="top" secondItem="qcS-bF-ce9" secondAttribute="bottom" constant="51" id="7qG-4m-g5V"/>
+                            <constraint firstItem="af5-XF-0Ro" firstAttribute="top" secondItem="qcS-bF-ce9" secondAttribute="bottom" constant="95" id="7qG-4m-g5V"/>
                             <constraint firstItem="aho-iv-Jfo" firstAttribute="trailing" secondItem="gvG-SF-Aee" secondAttribute="trailing" id="8Gq-xH-bzN"/>
                             <constraint firstItem="WXD-Qm-c0f" firstAttribute="leading" secondItem="cJg-Ji-dYy" secondAttribute="leading" id="V4k-zH-maG"/>
                             <constraint firstItem="af5-XF-0Ro" firstAttribute="centerX" secondItem="gvG-SF-Aee" secondAttribute="centerX" id="Wl5-Uf-jTe"/>
@@ -522,35 +522,25 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="F8X-ck-juU">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="F8X-ck-juU">
                                 <rect key="frame" x="59" y="121" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChangedValue:" destination="qAz-Ur-KXd" eventType="valueChanged" id="LRR-jg-yBE"/>
+                                </connections>
                             </stepper>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your fave number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-FT-3of">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your fave number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-FT-3of">
                                 <rect key="frame" x="193" y="121" width="215" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="numberTextFieldDidChange:" destination="qAz-Ur-KXd" eventType="editingChanged" id="IRN-M8-Vco"/>
+                                    <outlet property="delegate" destination="qAz-Ur-KXd" id="zlQ-Rk-ad5"/>
+                                </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-ew-B31">
-                                <rect key="frame" x="193" y="418" width="215" height="29"/>
-                                <segments>
-                                    <segment title="Volume"/>
-                                    <segment title="Brightness"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Even dates!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-h0-V73">
                                 <rect key="frame" x="63" y="256" width="90" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Q84-Mc-s8Z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-Ww-pYg">
-                                <rect key="frame" x="193" y="289" width="230" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="1y3-JS-sQR"/>
-                                    <constraint firstAttribute="width" constant="230" id="WLi-ob-Ky1"/>
+                                    <constraint firstAttribute="height" constant="21" id="vGw-ZA-Ea8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -558,33 +548,82 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pgt-gy-r8c">
                                 <rect key="frame" x="59" y="285" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChangedValue:" destination="qAz-Ur-KXd" eventType="valueChanged" id="iPH-xD-SXa"/>
+                                </connections>
                             </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="08F-iw-ycw">
-                                <rect key="frame" x="61" y="417" width="94" height="29"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="08F-iw-ycw">
+                                <rect key="frame" x="253" y="418" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperChangedValue:" destination="qAz-Ur-KXd" eventType="valueChanged" id="bJD-hS-usK"/>
+                                </connections>
                             </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX1-Ol-KHw">
+                                <rect key="frame" x="255" y="383" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mvM-So-8XF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-Ww-pYg">
+                                <rect key="frame" x="193" y="289" width="301" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="301" id="zrd-Wf-gmD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Ur-FT-3of" firstAttribute="trailing" secondItem="QLh-ew-B31" secondAttribute="trailing" id="1kL-i7-2bN"/>
-                            <constraint firstItem="QLh-ew-B31" firstAttribute="leading" secondItem="08F-iw-ycw" secondAttribute="trailing" constant="38" id="2dQ-qp-JZQ"/>
-                            <constraint firstItem="F8X-ck-juU" firstAttribute="leading" secondItem="qhM-Xe-f2X" secondAttribute="leadingMargin" constant="43" id="5qx-EK-KSb"/>
-                            <constraint firstItem="aOa-3B-yjO" firstAttribute="top" secondItem="08F-iw-ycw" secondAttribute="bottom" constant="154" id="9Cb-5a-Ddc"/>
-                            <constraint firstItem="6Ur-FT-3of" firstAttribute="leading" secondItem="VZb-Ww-pYg" secondAttribute="leading" id="Juy-kh-PTG"/>
-                            <constraint firstItem="QLh-ew-B31" firstAttribute="leading" secondItem="VZb-Ww-pYg" secondAttribute="leading" id="Njd-f0-eCi"/>
-                            <constraint firstItem="QLh-ew-B31" firstAttribute="centerX" secondItem="qhM-Xe-f2X" secondAttribute="centerX" id="OLh-jF-pcd"/>
-                            <constraint firstItem="6Ur-FT-3of" firstAttribute="top" secondItem="F8X-ck-juU" secondAttribute="top" id="fKv-HI-jdX"/>
-                            <constraint firstItem="gAh-h0-V73" firstAttribute="centerX" secondItem="08F-iw-ycw" secondAttribute="centerX" id="g0h-vS-sIq"/>
-                            <constraint firstItem="pgt-gy-r8c" firstAttribute="top" secondItem="gAh-h0-V73" secondAttribute="bottom" constant="8" symbolic="YES" id="k4Z-Xb-SrW"/>
-                            <constraint firstItem="gAh-h0-V73" firstAttribute="top" secondItem="qhM-Xe-f2X" secondAttribute="top" constant="256" id="llY-Nv-Ric"/>
-                            <constraint firstItem="pgt-gy-r8c" firstAttribute="trailing" secondItem="gAh-h0-V73" secondAttribute="trailing" id="oBO-0a-b20"/>
-                            <constraint firstItem="F8X-ck-juU" firstAttribute="top" secondItem="TQB-dG-LdZ" secondAttribute="bottom" constant="57" id="oDi-II-CF7"/>
-                            <constraint firstItem="08F-iw-ycw" firstAttribute="bottom" secondItem="QLh-ew-B31" secondAttribute="bottom" id="pkd-jX-ebm"/>
-                            <constraint firstItem="pgt-gy-r8c" firstAttribute="centerY" secondItem="VZb-Ww-pYg" secondAttribute="centerY" id="qSm-Al-TjH"/>
-                            <constraint firstItem="F8X-ck-juU" firstAttribute="leading" secondItem="pgt-gy-r8c" secondAttribute="leading" id="stT-Cl-lzL"/>
+                            <constraint firstItem="pgt-gy-r8c" firstAttribute="top" secondItem="gAh-h0-V73" secondAttribute="bottom" constant="8" symbolic="YES" id="50d-2F-wkV"/>
+                            <constraint firstAttribute="centerX" secondItem="08F-iw-ycw" secondAttribute="centerX" id="7SL-mj-PCm"/>
+                            <constraint firstItem="6Ur-FT-3of" firstAttribute="top" secondItem="F8X-ck-juU" secondAttribute="top" id="9Ph-Hr-i3u"/>
+                            <constraint firstAttribute="centerX" secondItem="vX1-Ol-KHw" secondAttribute="centerX" constant="4" id="FiZ-sQ-qga"/>
+                            <constraint firstItem="pgt-gy-r8c" firstAttribute="leading" secondItem="F8X-ck-juU" secondAttribute="leading" id="HT6-sE-cUi"/>
+                            <constraint firstItem="F8X-ck-juU" firstAttribute="top" secondItem="TQB-dG-LdZ" secondAttribute="bottom" constant="57" id="Hcq-LE-Hlz"/>
+                            <constraint firstItem="aOa-3B-yjO" firstAttribute="top" secondItem="08F-iw-ycw" secondAttribute="bottom" constant="153" id="II1-7v-4Sf"/>
+                            <constraint firstAttribute="centerY" secondItem="pgt-gy-r8c" secondAttribute="centerY" id="MWQ-Xq-AvM"/>
+                            <constraint firstAttribute="centerY" secondItem="VZb-Ww-pYg" secondAttribute="centerY" id="NE7-Bp-J75"/>
+                            <constraint firstItem="vX1-Ol-KHw" firstAttribute="leading" secondItem="qhM-Xe-f2X" secondAttribute="leading" constant="255" id="Pnl-VU-bGO"/>
+                            <constraint firstAttribute="centerX" secondItem="vX1-Ol-KHw" secondAttribute="centerX" id="Q0F-rh-eqb"/>
+                            <constraint firstItem="VZb-Ww-pYg" firstAttribute="leading" secondItem="6Ur-FT-3of" secondAttribute="leading" id="V41-SW-IpC"/>
+                            <constraint firstItem="pgt-gy-r8c" firstAttribute="top" secondItem="VZb-Ww-pYg" secondAttribute="top" constant="-4" id="YFY-gJ-Y3b"/>
+                            <constraint firstItem="VZb-Ww-pYg" firstAttribute="centerY" secondItem="pgt-gy-r8c" secondAttribute="centerY" id="cjR-tj-OMi"/>
+                            <constraint firstItem="pgt-gy-r8c" firstAttribute="top" secondItem="gAh-h0-V73" secondAttribute="bottom" constant="8" id="dMh-1S-Af3"/>
+                            <constraint firstItem="08F-iw-ycw" firstAttribute="centerX" secondItem="qhM-Xe-f2X" secondAttribute="centerX" id="gtN-h2-TT5"/>
+                            <constraint firstAttribute="centerY" secondItem="pgt-gy-r8c" secondAttribute="centerY" id="h2B-ic-gs7"/>
+                            <constraint firstItem="6Ur-FT-3of" firstAttribute="leading" secondItem="F8X-ck-juU" secondAttribute="trailing" constant="40" id="jML-bw-gAY"/>
+                            <constraint firstItem="vX1-Ol-KHw" firstAttribute="top" secondItem="VZb-Ww-pYg" secondAttribute="bottom" constant="73" id="mhx-ia-6YP"/>
+                            <constraint firstItem="F8X-ck-juU" firstAttribute="leading" secondItem="qhM-Xe-f2X" secondAttribute="leadingMargin" constant="43" id="qVe-gV-izk"/>
+                            <constraint firstItem="pgt-gy-r8c" firstAttribute="trailing" secondItem="gAh-h0-V73" secondAttribute="trailing" id="uru-VH-Lu5"/>
+                            <constraint firstItem="aOa-3B-yjO" firstAttribute="top" secondItem="pgt-gy-r8c" secondAttribute="bottom" constant="286" id="v0Z-t5-3hY"/>
+                            <constraint firstItem="6Ur-FT-3of" firstAttribute="centerX" secondItem="08F-iw-ycw" secondAttribute="centerX" id="xUy-UV-MUY"/>
+                            <constraint firstItem="08F-iw-ycw" firstAttribute="top" secondItem="vX1-Ol-KHw" secondAttribute="bottom" constant="14" id="ycI-On-5pW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MWQ-Xq-AvM"/>
+                                <exclude reference="YFY-gJ-Y3b"/>
+                                <exclude reference="dMh-1S-Af3"/>
+                                <exclude reference="h2B-ic-gs7"/>
+                                <exclude reference="FiZ-sQ-qga"/>
+                                <exclude reference="v0Z-t5-3hY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="IWQ-Vc-Iwt"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="VZb-Ww-pYg" id="9s2-Dv-JQw"/>
+                        <outlet property="dateStepper" destination="pgt-gy-r8c" id="dHU-07-bBY"/>
+                        <outlet property="numberStepper" destination="F8X-ck-juU" id="LkN-HH-SaP"/>
+                        <outlet property="numberTextField" destination="6Ur-FT-3of" id="pj9-0M-t9Z"/>
+                        <outlet property="utilityStepper" destination="08F-iw-ycw" id="xhG-ZA-EQz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM3-oq-49f" sceneMemberID="firstResponder"/>
             </objects>
@@ -708,7 +747,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                     <constraint firstAttribute="width" constant="240" id="sSY-wj-iPG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PN-hu-vxY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spotlights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PN-hu-vxY">
                                 <rect key="frame" x="262" y="137" width="77" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LKm-fv-NTc"/>
@@ -733,7 +772,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xIO-ut-Qad">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xIO-ut-Qad">
                                 <rect key="frame" x="204" y="166" width="191" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="sHg-3r-iph"/>
