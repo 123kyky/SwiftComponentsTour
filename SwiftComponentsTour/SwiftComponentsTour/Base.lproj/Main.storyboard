@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="0P3-d7-twk" kind="relationship" relationship="rootViewController" id="EOz-7l-l0j"/>
+                        <segue destination="HLN-CR-j2f" kind="relationship" relationship="rootViewController" id="LPv-uo-1e8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -431,10 +431,14 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Base" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-XF-0Ro">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Qm-c0f">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-XF-0Ro">
                                 <rect key="frame" x="281" y="115" width="39" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="kYP-MP-SxR"/>
+                                    <constraint firstAttribute="height" constant="21" id="t0v-dA-Coa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -443,48 +447,64 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-4F-XXs">
                                 <rect key="frame" x="286" y="394" width="28" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="hk9-5u-IEs"/>
+                                    <constraint firstAttribute="height" constant="21" id="Int-mC-yWo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gvG-SF-Aee">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gvG-SF-Aee">
                                 <rect key="frame" x="157" y="144" width="286" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="286" id="qmM-AP-Dae"/>
+                                    <constraint firstAttribute="width" constant="286" id="Sji-YR-ym6"/>
                                 </constraints>
                                 <segments>
                                     <segment title="White"/>
-                                    <segment title="Black"/>
-                                    <segment title="Brown"/>
-                                    <segment title="Puce"/>
-                                </segments>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aho-iv-Jfo">
-                                <rect key="frame" x="157" y="423" width="286" height="29"/>
-                                <segments>
                                     <segment title="Red"/>
                                     <segment title="Blue"/>
                                     <segment title="Yellow"/>
                                 </segments>
+                                <connections>
+                                    <action selector="baseSegmentDidChange:" destination="HLN-CR-j2f" eventType="valueChanged" id="pCZ-nK-wcZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aho-iv-Jfo">
+                                <rect key="frame" x="157" y="423" width="286" height="29"/>
+                                <segments>
+                                    <segment title="White"/>
+                                    <segment title="Red"/>
+                                    <segment title="Blue"/>
+                                    <segment title="Yellow"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mixSegmentDidChange:" destination="HLN-CR-j2f" eventType="valueChanged" id="SaG-Yf-dJJ"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="af5-XF-0Ro" firstAttribute="centerX" secondItem="cJg-Ji-dYy" secondAttribute="centerX" id="ALX-UJ-nHk"/>
-                            <constraint firstItem="aho-iv-Jfo" firstAttribute="top" secondItem="Ucb-4F-XXs" secondAttribute="bottom" constant="8" symbolic="YES" id="AMn-0P-GqD"/>
-                            <constraint firstItem="Ucb-4F-XXs" firstAttribute="centerX" secondItem="aho-iv-Jfo" secondAttribute="centerX" id="EEQ-x5-g8F"/>
-                            <constraint firstItem="aho-iv-Jfo" firstAttribute="trailing" secondItem="gvG-SF-Aee" secondAttribute="trailing" id="JOe-s6-HEb"/>
-                            <constraint firstItem="c1y-2u-Xce" firstAttribute="top" secondItem="aho-iv-Jfo" secondAttribute="bottom" constant="149" id="NrP-Yv-umz"/>
-                            <constraint firstItem="gvG-SF-Aee" firstAttribute="top" secondItem="af5-XF-0Ro" secondAttribute="bottom" constant="8" symbolic="YES" id="dwR-IE-21L"/>
-                            <constraint firstItem="af5-XF-0Ro" firstAttribute="top" secondItem="qcS-bF-ce9" secondAttribute="bottom" constant="51" id="hgI-cU-gDr"/>
-                            <constraint firstItem="gvG-SF-Aee" firstAttribute="centerX" secondItem="af5-XF-0Ro" secondAttribute="centerX" id="iFn-Wm-tsB"/>
-                            <constraint firstItem="aho-iv-Jfo" firstAttribute="leading" secondItem="gvG-SF-Aee" secondAttribute="leading" id="ogt-re-PuQ"/>
+                            <constraint firstItem="WXD-Qm-c0f" firstAttribute="top" secondItem="cJg-Ji-dYy" secondAttribute="top" id="3z8-h9-aDo"/>
+                            <constraint firstItem="aho-iv-Jfo" firstAttribute="centerX" secondItem="cJg-Ji-dYy" secondAttribute="centerX" id="5Sb-CO-2pr"/>
+                            <constraint firstItem="WXD-Qm-c0f" firstAttribute="bottom" secondItem="c1y-2u-Xce" secondAttribute="top" id="6mM-ib-DFb"/>
+                            <constraint firstItem="aho-iv-Jfo" firstAttribute="leading" secondItem="gvG-SF-Aee" secondAttribute="leading" id="6rx-WM-dMI"/>
+                            <constraint firstItem="af5-XF-0Ro" firstAttribute="top" secondItem="qcS-bF-ce9" secondAttribute="bottom" constant="51" id="7qG-4m-g5V"/>
+                            <constraint firstItem="aho-iv-Jfo" firstAttribute="trailing" secondItem="gvG-SF-Aee" secondAttribute="trailing" id="8Gq-xH-bzN"/>
+                            <constraint firstItem="WXD-Qm-c0f" firstAttribute="leading" secondItem="cJg-Ji-dYy" secondAttribute="leading" id="V4k-zH-maG"/>
+                            <constraint firstItem="af5-XF-0Ro" firstAttribute="centerX" secondItem="gvG-SF-Aee" secondAttribute="centerX" id="Wl5-Uf-jTe"/>
+                            <constraint firstItem="Ucb-4F-XXs" firstAttribute="centerX" secondItem="aho-iv-Jfo" secondAttribute="centerX" id="bnK-5o-9Ou"/>
+                            <constraint firstItem="WXD-Qm-c0f" firstAttribute="centerX" secondItem="Ucb-4F-XXs" secondAttribute="centerX" id="cdk-rt-vS2"/>
+                            <constraint firstItem="aho-iv-Jfo" firstAttribute="top" secondItem="Ucb-4F-XXs" secondAttribute="bottom" constant="8" symbolic="YES" id="s0C-L3-GSf"/>
+                            <constraint firstItem="gvG-SF-Aee" firstAttribute="top" secondItem="af5-XF-0Ro" secondAttribute="bottom" constant="8" symbolic="YES" id="yl3-qy-ihJ"/>
+                            <constraint firstItem="c1y-2u-Xce" firstAttribute="top" secondItem="aho-iv-Jfo" secondAttribute="bottom" constant="149" id="zet-CJ-FpQ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="kw2-0V-wuf"/>
+                    <connections>
+                        <outlet property="baseSegmentedButton" destination="gvG-SF-Aee" id="TXP-sJ-bOf"/>
+                        <outlet property="mixSegmentedButton" destination="aho-iv-Jfo" id="937-As-ree"/>
+                        <outlet property="mixingView" destination="WXD-Qm-c0f" id="YTD-W8-qaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCd-l4-1CX" sceneMemberID="firstResponder"/>
             </objects>

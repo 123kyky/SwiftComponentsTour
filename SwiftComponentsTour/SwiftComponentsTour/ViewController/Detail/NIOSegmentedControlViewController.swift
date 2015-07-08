@@ -10,26 +10,18 @@ import UIKit
 
 class NIOSegmentedControlViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBOutlet weak var baseSegmentedButton: UISegmentedControl!
+    @IBOutlet weak var mixSegmentedButton: UISegmentedControl!
+    @IBOutlet weak var mixingView: UIView!
     
+    var colors = [UIColor.whiteColor(), UIColor.redColor(), UIColor.blueColor(), UIColor.yellowColor()]
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func baseSegmentDidChange(sender: AnyObject) {
+        self.view.backgroundColor = colors[self.baseSegmentedButton.selectedSegmentIndex]
     }
-    */
 
+    @IBAction func mixSegmentDidChange(sender: AnyObject) {
+        self.mixingView.backgroundColor = self.colors[self.mixSegmentedButton.selectedSegmentIndex].colorWithAlphaComponent(0.5)
+    }
 }
