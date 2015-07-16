@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qAz-Ur-KXd" kind="relationship" relationship="rootViewController" id="LFA-Hg-YP3"/>
+                        <segue destination="E5Y-n0-1gU" kind="relationship" relationship="rootViewController" id="6hj-wa-kMM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -831,34 +831,42 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byd-Gg-aJa">
-                                <rect key="frame" x="284" y="126" width="33" height="30"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-80-7YB">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dQE-Y5-yaO">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dQE-Y5-yaO">
                                 <rect key="frame" x="225" y="355" width="150" height="2"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="b6K-oa-l7U"/>
+                                    <constraint firstAttribute="width" constant="150" id="zlH-uM-oQS"/>
                                 </constraints>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byd-Gg-aJa">
+                                <rect key="frame" x="284" y="202" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="E5Y-n0-1gU" eventType="touchUpInside" id="Hei-sf-Tli"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oiW-80-7YB" firstAttribute="centerX" secondItem="byd-Gg-aJa" secondAttribute="centerX" id="5A7-SO-4Iq"/>
-                            <constraint firstItem="dQE-Y5-yaO" firstAttribute="top" secondItem="oiW-80-7YB" secondAttribute="bottom" constant="45" id="5Bz-YF-qgu"/>
-                            <constraint firstItem="byd-Gg-aJa" firstAttribute="top" secondItem="KcR-sC-zF3" secondAttribute="bottom" constant="62" id="AXg-tm-ixv"/>
-                            <constraint firstItem="dQE-Y5-yaO" firstAttribute="centerX" secondItem="7HB-rV-1jx" secondAttribute="centerX" id="Gy2-hX-w7V"/>
-                            <constraint firstItem="dQE-Y5-yaO" firstAttribute="centerX" secondItem="oiW-80-7YB" secondAttribute="centerX" id="JF9-2U-pRc"/>
-                            <constraint firstItem="oiW-80-7YB" firstAttribute="centerY" secondItem="7HB-rV-1jx" secondAttribute="centerY" id="mWB-Fy-NCf"/>
+                            <constraint firstItem="oiW-80-7YB" firstAttribute="centerY" secondItem="7HB-rV-1jx" secondAttribute="centerY" id="2fG-bJ-zFI"/>
+                            <constraint firstItem="dQE-Y5-yaO" firstAttribute="top" secondItem="oiW-80-7YB" secondAttribute="bottom" constant="45" id="4st-c8-PyY"/>
+                            <constraint firstItem="dQE-Y5-yaO" firstAttribute="centerX" secondItem="7HB-rV-1jx" secondAttribute="centerX" id="UN2-5t-iTR"/>
+                            <constraint firstItem="oiW-80-7YB" firstAttribute="centerX" secondItem="dQE-Y5-yaO" secondAttribute="centerX" id="f1H-sK-Wwh"/>
+                            <constraint firstItem="byd-Gg-aJa" firstAttribute="centerX" secondItem="oiW-80-7YB" secondAttribute="centerX" id="lVe-zV-uJa"/>
+                            <constraint firstItem="oiW-80-7YB" firstAttribute="top" secondItem="byd-Gg-aJa" secondAttribute="bottom" constant="58" id="v5I-h0-7F9"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="R2T-WG-BiL"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="oiW-80-7YB" id="9XE-MF-iaa"/>
+                        <outlet property="progressBar" destination="dQE-Y5-yaO" id="AIc-OL-1sT"/>
+                        <outlet property="startButton" destination="byd-Gg-aJa" id="nkj-i2-J9e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvR-HX-B0T" sceneMemberID="firstResponder"/>
             </objects>
