@@ -10,26 +10,77 @@ import UIKit
 
 class NIOGesturesViewController: UIViewController {
 
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+
+    @IBOutlet weak var square: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.calculateSquareConstraintsCentered()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func calculateSquareConstraintsCentered() {
+        self.view.layoutIfNeeded()
+        
+        self.topConstraint.constant = self.view.bounds.size.height / 2 - self.heightConstraint.constant / 2
+        self.bottomConstraint.constant = self.view.bounds.size.height - self.topConstraint.constant - self.heightConstraint.constant
+        self.leftConstraint.constant = self.view.bounds.size.width / 2 - self.widthConstraint.constant / 2
+        self.rightConstraint.constant = self.view.bounds.size.width - self.leftConstraint.constant - self.widthConstraint.constant
+        
+        self.square.layoutIfNeeded()
     }
-    */
-
+    
+    @IBAction func longPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func swipedUp(sender: AnyObject) {
+    }
+    
+    @IBAction func swipedDown(sender: AnyObject) {
+    }
+    
+    @IBAction func pinchedSquare(sender: UIPinchGestureRecognizer) {
+        var difference = -(self.widthConstraint.constant - self.widthConstraint.constant * sender.scale) / 2
+        self.widthConstraint.constant *= sender.scale
+        self.heightConstraint.constant *= sender.scale
+        self.topConstraint.constant -= difference
+        self.bottomConstraint.constant = self.view.bounds.size.height - self.topConstraint.constant - self.heightConstraint.constant
+        self.leftConstraint.constant -= difference
+        self.rightConstraint.constant = self.view.bounds.size.width - self.leftConstraint.constant - self.widthConstraint.constant
+        
+        sender.scale = 1
+        self.square.layoutIfNeeded()
+    }
+    
+    @IBAction func pannedSquare(sender: UIPanGestureRecognizer) {
+        var pointInView = sender.translationInView(self.view)
+        var pointInSquare = sender.translationInView(self.square)
+        self.topConstraint.constant += pointInView.y
+        self.bottomConstraint.constant = self.view.bounds.size.height - self.topConstraint.constant - self.heightConstraint.constant
+        self.leftConstraint.constant += pointInView.x
+        self.rightConstraint.constant = self.view.bounds.size.width - self.leftConstraint.constant - self.widthConstraint.constant
+        
+        NSLog("\(self.topConstraint.constant), \(self.bottomConstraint.constant)")
+        NSLog("\(self.leftConstraint.constant), \(self.rightConstraint.constant)")
+        
+        sender.setTranslation(CGPointZero, inView: self.view)
+        self.square.layoutIfNeeded()
+    }
+    
+    @IBAction func rotatedSquare(sender: UIRotationGestureRecognizer) {
+        self.square.transform = CGAffineTransformMakeRotation(sender.rotation)
+    }
+    
+    @IBAction func tappedSquare(sender: AnyObject) {
+        var random1 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
+        var random2 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
+        var random3 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
+        self.square.backgroundColor = UIColor(red: random1, green: random2, blue: random3, alpha: 1)
+    }
 }

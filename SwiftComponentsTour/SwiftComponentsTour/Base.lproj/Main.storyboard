@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="4zb-V0-Xju" kind="relationship" relationship="rootViewController" id="eWR-Pv-oa2"/>
+                        <segue destination="T1f-Sf-f1U" kind="relationship" relationship="rootViewController" id="asj-wD-F91"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -954,20 +954,11 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7">
-                                <rect key="frame" x="275" y="275" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="IXi-Zl-itB" appends="YES" id="Q4Z-Hi-P0N"/>
-                                    <outletCollection property="gestureRecognizers" destination="D8T-at-ib9" appends="YES" id="pHZ-HO-Wag"/>
-                                    <outletCollection property="gestureRecognizers" destination="oKg-mj-5FA" appends="YES" id="YGO-zJ-gk9"/>
-                                    <outletCollection property="gestureRecognizers" destination="QW2-pi-KxY" appends="YES" id="e1i-9e-G3B"/>
-                                </connections>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-aA-3dg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-aA-3dg">
                                 <rect key="frame" x="71" y="557" width="459" height="35"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="NH3-xK-r21"/>
+                                    <constraint firstAttribute="width" constant="459" id="W7A-TG-fzU"/>
                                     <constraint firstAttribute="height" constant="35" id="sKc-Zd-pDu"/>
                                 </constraints>
                                 <string key="text">Long press to reset. Pinch to resize. Pan to drag. Rotate to rotate. Swipe up to add another. Swipe down to remove one. Tap to change the color.</string>
@@ -975,36 +966,88 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7">
+                                <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="a7S-4j-N7Q"/>
+                                    <constraint firstAttribute="height" constant="50" id="lLw-ep-utc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jwV-q7-SqU" appends="YES" id="Qvc-KV-mxD"/>
+                                    <outletCollection property="gestureRecognizers" destination="lh3-Wr-fb7" appends="YES" id="hIj-Rk-5tO"/>
+                                    <outletCollection property="gestureRecognizers" destination="xbK-47-ocP" appends="YES" id="n5P-mp-Cog"/>
+                                    <outletCollection property="gestureRecognizers" destination="c1J-Tc-UMI" appends="YES" id="Qsk-rX-fYC"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="top" secondItem="7Ey-E4-JLA" secondAttribute="bottom" constant="211" id="5qw-hv-LXq"/>
                             <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="RgU-aA-3dg" secondAttribute="bottom" constant="8" symbolic="YES" id="DBn-DY-gFd"/>
-                            <constraint firstItem="RgU-aA-3dg" firstAttribute="centerX" secondItem="rEc-Yq-bV7" secondAttribute="centerX" id="env-P8-LRh"/>
-                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="centerY" secondItem="i8T-OJ-n6d" secondAttribute="centerY" id="mst-VY-9vk"/>
-                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="leading" secondItem="i8T-OJ-n6d" secondAttribute="leading" constant="275" id="mvY-LB-xvm"/>
+                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="leading" secondItem="i8T-OJ-n6d" secondAttribute="leading" constant="275" id="KXU-F2-rpA"/>
+                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="top" secondItem="7Ey-E4-JLA" secondAttribute="bottom" constant="211" id="QVB-GQ-cli"/>
+                            <constraint firstAttribute="trailing" secondItem="rEc-Yq-bV7" secondAttribute="trailing" constant="275" id="S2p-xG-rsR"/>
+                            <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="rEc-Yq-bV7" secondAttribute="bottom" constant="275" id="Wdg-zl-yLJ"/>
                             <constraint firstItem="RgU-aA-3dg" firstAttribute="centerX" secondItem="i8T-OJ-n6d" secondAttribute="centerX" id="rTK-vi-cXU"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="rvK-HQ-ivS" appends="YES" id="Si0-RU-qBo"/>
                             <outletCollection property="gestureRecognizers" destination="gXI-L4-3ng" appends="YES" id="f7h-oT-PqG"/>
-                            <outletCollection property="gestureRecognizers" destination="ZXB-dc-nHa" appends="YES" id="Dhr-dO-u3V"/>
-                            <outletCollection property="gestureRecognizers" destination="JmN-zC-nTT" appends="YES" id="nEi-Dp-QoK"/>
+                            <outletCollection property="gestureRecognizers" destination="SNQ-Hm-HXo" appends="YES" id="b1v-lf-uYS"/>
+                            <outletCollection property="gestureRecognizers" destination="cjA-Ov-YxE" appends="YES" id="d0R-zJ-LwF"/>
                         </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="wIL-Bv-zlF"/>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="Wdg-zl-yLJ" id="eLf-PJ-dzb"/>
+                        <outlet property="heightConstraint" destination="lLw-ep-utc" id="vYD-CC-ezZ"/>
+                        <outlet property="leftConstraint" destination="KXU-F2-rpA" id="6FE-Ta-xhd"/>
+                        <outlet property="rightConstraint" destination="S2p-xG-rsR" id="2du-7g-AHd"/>
+                        <outlet property="square" destination="rEc-Yq-bV7" id="xnv-GB-60W"/>
+                        <outlet property="topConstraint" destination="QVB-GQ-cli" id="H2N-qP-jve"/>
+                        <outlet property="widthConstraint" destination="a7S-4j-N7Q" id="JKa-ll-tVA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lf-yn-uWV" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="IXi-Zl-itB"/>
-                <pinchGestureRecognizer id="D8T-at-ib9"/>
-                <rotationGestureRecognizer id="oKg-mj-5FA"/>
                 <swipeGestureRecognizer direction="right" id="rvK-HQ-ivS"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="QW2-pi-KxY"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gXI-L4-3ng"/>
-                <swipeGestureRecognizer direction="right" id="ZXB-dc-nHa"/>
-                <swipeGestureRecognizer direction="right" id="JmN-zC-nTT"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gXI-L4-3ng">
+                    <connections>
+                        <action selector="longPressed:" destination="T1f-Sf-f1U" id="Qp4-ti-gwf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pinchGestureRecognizer id="jwV-q7-SqU">
+                    <connections>
+                        <action selector="pinchedSquare:" destination="T1f-Sf-f1U" id="oKN-Bl-sY5"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lh3-Wr-fb7">
+                    <connections>
+                        <action selector="pannedSquare:" destination="T1f-Sf-f1U" id="QYu-A0-8MB"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="xbK-47-ocP">
+                    <connections>
+                        <action selector="rotatedSquare:" destination="T1f-Sf-f1U" id="bKU-d7-axX"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="SNQ-Hm-HXo">
+                    <connections>
+                        <action selector="swipedUp:" destination="T1f-Sf-f1U" id="k51-j1-dnp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="cjA-Ov-YxE">
+                    <connections>
+                        <action selector="swipedDown:" destination="T1f-Sf-f1U" id="fQ2-2t-ZG3"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="c1J-Tc-UMI">
+                    <connections>
+                        <action selector="tappedSquare:" destination="T1f-Sf-f1U" id="Vjx-dY-u9B"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2058" y="1521"/>
         </scene>
