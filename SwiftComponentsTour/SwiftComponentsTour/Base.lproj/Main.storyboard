@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="E5Y-n0-1gU" kind="relationship" relationship="rootViewController" id="6hj-wa-kMM"/>
+                        <segue destination="4zb-V0-Xju" kind="relationship" relationship="rootViewController" id="eWR-Pv-oa2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -884,49 +884,59 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="e8N-aA-hmS">
-                                <rect key="frame" x="0.0" y="438" width="600" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="457892815.73250502">
-                                    <!--2015-07-06 16:26:55 +0000-->
-                                </date>
-                            </datePicker>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-DK-zin">
-                                <rect key="frame" x="0.0" y="94" width="600" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-DK-zin">
+                                <rect key="frame" x="0.0" y="167" width="600" height="162"/>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick a date, any date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Y6-Ex-8Cm">
-                                <rect key="frame" x="148" y="400" width="304" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="304" id="zfO-YA-RNK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is your favorite of Apple's favorite cities?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI8-ky-j8a">
-                                <rect key="frame" x="122" y="72" width="356" height="21"/>
+                                <rect key="frame" x="101" y="109" width="399" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="jWK-bF-fak"/>
+                                    <constraint firstAttribute="height" constant="21" id="lDA-77-LHX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu6-tJ-XKZ">
+                                <rect key="frame" x="227" y="138" width="147" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5TA-VS-W6J"/>
+                                    <constraint firstAttribute="width" constant="147" id="FUz-ZJ-PuS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick a date, any date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Y6-Ex-8Cm">
+                                <rect key="frame" x="148" y="353" width="304" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="ppN-Wr-1D0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="e8N-aA-hmS" firstAttribute="bottom" secondItem="QB3-0D-aIf" secondAttribute="top" id="0XZ-hU-HmL"/>
-                            <constraint firstItem="e8N-aA-hmS" firstAttribute="centerX" secondItem="9Y6-Ex-8Cm" secondAttribute="centerX" id="4fj-fN-dUs"/>
-                            <constraint firstItem="e8N-aA-hmS" firstAttribute="top" secondItem="9Y6-Ex-8Cm" secondAttribute="bottom" constant="8" symbolic="YES" id="TE0-Uc-OVS"/>
-                            <constraint firstItem="zK6-DK-zin" firstAttribute="top" secondItem="bI8-ky-j8a" secondAttribute="bottom" constant="1" id="ehQ-SZ-7d0"/>
-                            <constraint firstItem="zK6-DK-zin" firstAttribute="leading" secondItem="e8N-aA-hmS" secondAttribute="leading" id="gwJ-Qt-2iM"/>
-                            <constraint firstAttribute="trailing" secondItem="zK6-DK-zin" secondAttribute="trailing" id="iAT-Wf-S0P"/>
-                            <constraint firstItem="zK6-DK-zin" firstAttribute="leading" secondItem="SEn-78-ibk" secondAttribute="leading" id="iHD-a7-FMF"/>
-                            <constraint firstItem="zK6-DK-zin" firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" id="uCc-WF-vgY"/>
-                            <constraint firstItem="bI8-ky-j8a" firstAttribute="top" secondItem="YoJ-jz-Wo4" secondAttribute="bottom" constant="8" symbolic="YES" id="xcr-40-pK8"/>
-                            <constraint firstItem="zK6-DK-zin" firstAttribute="trailing" secondItem="e8N-aA-hmS" secondAttribute="trailing" id="zjk-1R-AIC"/>
+                            <constraint firstAttribute="centerX" secondItem="9Y6-Ex-8Cm" secondAttribute="centerX" id="3oD-WH-1TP"/>
+                            <constraint firstItem="zK6-DK-zin" firstAttribute="top" secondItem="nu6-tJ-XKZ" secondAttribute="bottom" constant="8" symbolic="YES" id="6UE-Si-LMH"/>
+                            <constraint firstItem="QB3-0D-aIf" firstAttribute="top" secondItem="9Y6-Ex-8Cm" secondAttribute="bottom" constant="217" id="7Et-Xl-k9k"/>
+                            <constraint firstAttribute="trailing" secondItem="zK6-DK-zin" secondAttribute="trailing" id="FlO-fl-nia"/>
+                            <constraint firstItem="9Y6-Ex-8Cm" firstAttribute="centerX" secondItem="zK6-DK-zin" secondAttribute="centerX" id="Pb2-72-qHc"/>
+                            <constraint firstItem="nu6-tJ-XKZ" firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" id="Rwv-2h-F6F"/>
+                            <constraint firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" constant="-0.5" id="dSp-ua-q3D"/>
+                            <constraint firstItem="nu6-tJ-XKZ" firstAttribute="top" secondItem="bI8-ky-j8a" secondAttribute="bottom" constant="8" symbolic="YES" id="nGK-n3-i7N"/>
+                            <constraint firstItem="zK6-DK-zin" firstAttribute="leading" secondItem="SEn-78-ibk" secondAttribute="leading" id="txM-EG-EpN"/>
+                            <constraint firstItem="bI8-ky-j8a" firstAttribute="top" secondItem="YoJ-jz-Wo4" secondAttribute="bottom" constant="45" id="xkG-cD-bLH"/>
+                            <constraint firstItem="nu6-tJ-XKZ" firstAttribute="centerX" secondItem="zK6-DK-zin" secondAttribute="centerX" id="zy1-OW-NH8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="99i-4l-2gF"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="9Y6-Ex-8Cm" id="kcf-03-e2j"/>
+                        <outlet property="picker" destination="zK6-DK-zin" id="oX1-rY-xAt"/>
+                        <outlet property="pickerDisplayLabel" destination="nu6-tJ-XKZ" id="DdH-cW-4xb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNb-dw-1cS" sceneMemberID="firstResponder"/>
             </objects>
