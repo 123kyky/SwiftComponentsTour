@@ -37,12 +37,11 @@ class NIOGesturesViewController: UIViewController {
     }
     
     @IBAction func longPressed(sender: AnyObject) {
-    }
-    
-    @IBAction func swipedUp(sender: AnyObject) {
-    }
-    
-    @IBAction func swipedDown(sender: AnyObject) {
+        self.widthConstraint.constant = 50
+        self.heightConstraint.constant = 50
+        self.square.transform = CGAffineTransformMakeRotation(0)
+        self.square.backgroundColor = UIColor.blueColor()
+        self.calculateSquareConstraintsCentered()
     }
     
     @IBAction func pinchedSquare(sender: UIPinchGestureRecognizer) {

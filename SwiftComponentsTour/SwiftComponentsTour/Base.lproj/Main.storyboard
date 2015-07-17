@@ -954,19 +954,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-aA-3dg">
-                                <rect key="frame" x="71" y="557" width="459" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="NH3-xK-r21"/>
-                                    <constraint firstAttribute="width" constant="459" id="W7A-TG-fzU"/>
-                                    <constraint firstAttribute="height" constant="35" id="sKc-Zd-pDu"/>
-                                </constraints>
-                                <string key="text">Long press to reset. Pinch to resize. Pan to drag. Rotate to rotate. Swipe up to add another. Swipe down to remove one. Tap to change the color.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7" customClass="NIOGesturedSquareView" customModule="SwiftComponentsTour" customModuleProvider="target">
                                 <rect key="frame" x="275" y="275" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -981,22 +969,29 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                     <outletCollection property="gestureRecognizers" destination="c1J-Tc-UMI" appends="YES" id="Qsk-rX-fYC"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to change the color. Pinch to resize. Pan to drag. Rotate to rotate. Long press to reset." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-aA-3dg">
+                                <rect key="frame" x="160" y="557" width="280" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="mSr-s0-yzo"/>
+                                    <constraint firstAttribute="height" constant="35" id="rnp-G0-liI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="RgU-aA-3dg" secondAttribute="bottom" constant="8" symbolic="YES" id="DBn-DY-gFd"/>
+                            <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="RgU-aA-3dg" secondAttribute="bottom" constant="8" symbolic="YES" id="Fty-sE-3ac"/>
                             <constraint firstItem="rEc-Yq-bV7" firstAttribute="leading" secondItem="i8T-OJ-n6d" secondAttribute="leading" constant="275" id="KXU-F2-rpA"/>
                             <constraint firstItem="rEc-Yq-bV7" firstAttribute="top" secondItem="7Ey-E4-JLA" secondAttribute="bottom" constant="211" id="QVB-GQ-cli"/>
                             <constraint firstAttribute="trailing" secondItem="rEc-Yq-bV7" secondAttribute="trailing" constant="275" id="S2p-xG-rsR"/>
+                            <constraint firstItem="RgU-aA-3dg" firstAttribute="centerX" secondItem="rEc-Yq-bV7" secondAttribute="centerX" id="VS4-Fz-mCc"/>
                             <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="rEc-Yq-bV7" secondAttribute="bottom" constant="275" id="Wdg-zl-yLJ"/>
-                            <constraint firstItem="RgU-aA-3dg" firstAttribute="centerX" secondItem="i8T-OJ-n6d" secondAttribute="centerX" id="rTK-vi-cXU"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="rvK-HQ-ivS" appends="YES" id="Si0-RU-qBo"/>
                             <outletCollection property="gestureRecognizers" destination="gXI-L4-3ng" appends="YES" id="f7h-oT-PqG"/>
-                            <outletCollection property="gestureRecognizers" destination="SNQ-Hm-HXo" appends="YES" id="b1v-lf-uYS"/>
-                            <outletCollection property="gestureRecognizers" destination="cjA-Ov-YxE" appends="YES" id="d0R-zJ-LwF"/>
                         </connections>
                     </view>
                     <toolbarItems/>
@@ -1012,7 +1007,6 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lf-yn-uWV" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="rvK-HQ-ivS"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gXI-L4-3ng">
                     <connections>
                         <action selector="longPressed:" destination="T1f-Sf-f1U" id="Qp4-ti-gwf"/>
@@ -1033,16 +1027,6 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <action selector="rotatedSquare:" destination="T1f-Sf-f1U" id="bKU-d7-axX"/>
                     </connections>
                 </rotationGestureRecognizer>
-                <swipeGestureRecognizer direction="up" id="SNQ-Hm-HXo">
-                    <connections>
-                        <action selector="swipedUp:" destination="T1f-Sf-f1U" id="k51-j1-dnp"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="down" id="cjA-Ov-YxE">
-                    <connections>
-                        <action selector="swipedDown:" destination="T1f-Sf-f1U" id="fQ2-2t-ZG3"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <tapGestureRecognizer id="c1J-Tc-UMI">
                     <connections>
                         <action selector="tappedSquare:" destination="T1f-Sf-f1U" id="Vjx-dY-u9B"/>
