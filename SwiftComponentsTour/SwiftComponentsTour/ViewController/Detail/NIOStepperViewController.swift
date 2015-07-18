@@ -35,6 +35,8 @@ class NIOStepperViewController: UIViewController, UITextFieldDelegate {
         self.utilityStepper.value = Double(UIScreen.mainScreen().brightness)
     }
     
+    // MARK: - Actions
+    
     @IBAction func stepperChangedValue(sender: AnyObject) {
         if sender as! NSObject == self.numberStepper {
             self.adjustNumberValue()
@@ -48,6 +50,8 @@ class NIOStepperViewController: UIViewController, UITextFieldDelegate {
     @IBAction func numberTextFieldDidChange(sender: AnyObject) {
         self.numberStepper.value = (self.numberTextField.text as NSString).doubleValue
     }
+    
+    // MARK: - Text Field
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if string == "" { // backspace
@@ -67,6 +71,8 @@ class NIOStepperViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         return true
     }
+    
+    // MARK: - Formatting and function
     
     func adjustNumberValue() {
         self.numberTextField.text = "\(Int(self.numberStepper!.value))"

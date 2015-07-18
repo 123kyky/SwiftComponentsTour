@@ -25,6 +25,8 @@ class NIOGesturesViewController: UIViewController {
         self.calculateSquareConstraintsCentered()
     }
     
+    // MARK: - Helpers
+    
     func calculateSquareConstraintsCentered() {
         self.view.layoutIfNeeded()
         
@@ -35,6 +37,8 @@ class NIOGesturesViewController: UIViewController {
         
         self.square.layoutIfNeeded()
     }
+    
+    // MARK: - Actions
     
     @IBAction func longPressed(sender: AnyObject) {
         self.widthConstraint.constant = 50

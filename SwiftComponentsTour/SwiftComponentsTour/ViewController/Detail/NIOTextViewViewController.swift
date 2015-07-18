@@ -19,6 +19,8 @@ class NIOTextViewViewController: UIViewController, UITextViewDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
+    // MARK: - Keyboard
+    
     func keyboardWillShow(notification: NSNotification) {
         var keyboardFrame: CGRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         

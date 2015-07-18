@@ -16,6 +16,7 @@ class NIOSegmentedControlViewController: UIViewController {
     
     var colors = [UIColor.whiteColor(), UIColor.redColor(), UIColor.blueColor(), UIColor.yellowColor()]
 
+    // MARK: - Actions
     
     @IBAction func baseSegmentDidChange(sender: AnyObject) {
         self.view.backgroundColor = colors[self.baseSegmentedButton.selectedSegmentIndex]

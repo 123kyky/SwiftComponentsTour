@@ -32,7 +32,6 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional  setup after loading the view, typically from a nib.
         
         self.splitViewController!.delegate = self
     }

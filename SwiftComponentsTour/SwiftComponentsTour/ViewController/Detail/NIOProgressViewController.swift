@@ -17,6 +17,8 @@ class NIOProgressViewController: UIViewController {
     var isLoading = false
     var timer: NSTimer!
     
+    // MARK: - Actions
+    
     @IBAction func buttonTapped(sender: AnyObject) {
         if !self.isLoading {
             self.activityIndicator.startAnimating()
@@ -27,6 +29,8 @@ class NIOProgressViewController: UIViewController {
             self.stopProgress()
         }
     }
+    
+    // MARK: - Helpers
     
     func startProgress() {
         if self.progressBar.progress == 1 {

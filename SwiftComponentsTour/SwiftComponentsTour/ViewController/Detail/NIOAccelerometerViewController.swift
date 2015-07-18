@@ -31,6 +31,8 @@ class NIOAccelerometerViewController: UIViewController {
         }
     }
     
+    // MARK: - Helpers
+    
     func setUpAccelerometerMonitoring() {
         self.motionManager.accelerometerUpdateInterval = 0.01
         self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) {
@@ -46,6 +48,12 @@ class NIOAccelerometerViewController: UIViewController {
             }
         }
     }
+    
+    func setBackgroundWithCalibration() {
+        self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+    }
+    
+    // MARK: - Actions
 
     @IBAction func zeroButtonTapped(sender: AnyObject) {
         self.calibratedAcceleration.x = self.motionManager.accelerometerData.acceleration.x
@@ -53,9 +61,5 @@ class NIOAccelerometerViewController: UIViewController {
         self.calibratedAcceleration.z = self.motionManager.accelerometerData.acceleration.z
         
         self.view.backgroundColor = UIColor.whiteColor()
-    }
-    
-    func setBackgroundWithCalibration() {
-        self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
     }
 }

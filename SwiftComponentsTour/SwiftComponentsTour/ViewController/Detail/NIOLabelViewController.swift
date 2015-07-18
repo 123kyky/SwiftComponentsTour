@@ -15,6 +15,12 @@ class NIOLabelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setAttributedStrings()
+    }
+    
+    // MARK: - Label
+    
+    func setAttributedStrings() {
         let font: UIFont = UIFont(name: "Georgia", size: 24)!
         var attributedString: NSMutableAttributedString = NSMutableAttributedString(string: self.attributedLabel.text!)
         attributedString.addAttributes([NSStrikethroughStyleAttributeName : 2], range: NSMakeRange(7, 4))

@@ -68,6 +68,8 @@ class NIOPickersViewController: UIViewController, UIPickerViewDataSource, UIPick
         self.dateTextField.text = self.dateFormatter.stringFromDate(self.datePicker.date)
     }
     
+    // MARK: - First Responder
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
         
