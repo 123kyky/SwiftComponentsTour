@@ -34,31 +34,36 @@ class NIOAccelerometerViewController: UIViewController {
     // MARK: - Helpers
     
     func setUpAccelerometerMonitoring() {
-        self.motionManager.accelerometerUpdateInterval = 0.01
-        self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) {
-            [weak self] (data: CMAccelerometerData!, error: NSError!) in
-            self!.xValueLabel.text = self?.numberFormatter.stringFromNumber(self!.calibratedAcceleration.x + data.acceleration.x)
-            self!.yValueLabel.text = self?.numberFormatter.stringFromNumber(self!.calibratedAcceleration.x + data.acceleration.y)
-            self!.zValueLabel.text = self?.numberFormatter.stringFromNumber(self!.calibratedAcceleration.x + data.acceleration.z)
-            
-            if self?.functionalitySwitch.on != nil {
-                self?.setBackgroundWithCalibration()
-            } else if self?.view.backgroundColor != UIColor.whiteColor() {
-                self?.view.backgroundColor = UIColor.whiteColor()
+        
+        if self.motionManager.deviceMotionAvailable {
+            self.motionManager.deviceMotionUpdateInterval = 0.01
+            self.motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) {
+                [weak self] (data: CMDeviceMotion!, error: NSError!) in
+                self!.xValueLabel.text = self?.numberFormatter.stringFromNumber(data.gravity.x - self!.calibratedAcceleration.x)
+                self!.yValueLabel.text = self?.numberFormatter.stringFromNumber(data.gravity.y - self!.calibratedAcceleration.y)
+                self!.zValueLabel.text = self?.numberFormatter.stringFromNumber(data.gravity.z - self!.calibratedAcceleration.z)
+                
+                if self?.functionalitySwitch.on == true {
+                    self?.setBackgroundWithCalibration()
+                } else if self?.view.backgroundColor != UIColor.whiteColor() {
+                    self?.view.backgroundColor = UIColor.whiteColor()
+                }
             }
         }
     }
     
     func setBackgroundWithCalibration() {
-        self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        UIView.animateWithDuration(self.motionManager.deviceMotionUpdateInterval, animations: { () -> Void in
+            self.view.backgroundColor = UIColor(red: CGFloat(abs(self.motionManager.deviceMotion.gravity.x)), green: CGFloat(abs(self.motionManager.deviceMotion.gravity.y)), blue: CGFloat(abs(self.motionManager.deviceMotion.gravity.z)), alpha: 1)
+        })
     }
     
     // MARK: - Actions
 
     @IBAction func zeroButtonTapped(sender: AnyObject) {
-        self.calibratedAcceleration.x = self.motionManager.accelerometerData.acceleration.x
-        self.calibratedAcceleration.y = self.motionManager.accelerometerData.acceleration.y
-        self.calibratedAcceleration.z = self.motionManager.accelerometerData.acceleration.z
+        self.calibratedAcceleration.x = self.motionManager.deviceMotion.gravity.x
+        self.calibratedAcceleration.y = self.motionManager.deviceMotion.gravity.y
+        self.calibratedAcceleration.z = self.motionManager.deviceMotion.gravity.z
         
         self.view.backgroundColor = UIColor.whiteColor()
     }
