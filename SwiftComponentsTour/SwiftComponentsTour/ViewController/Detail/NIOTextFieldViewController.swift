@@ -102,4 +102,10 @@ class NIOTextFieldViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        super.touchesBegan(touches, withEvent: event)
+        
+        self.view.endEditing(true)
+    }
+    
 }

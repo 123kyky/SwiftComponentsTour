@@ -26,15 +26,18 @@ class NIOAccelerometerViewController: UIViewController {
         self.numberFormatter.numberStyle = .DecimalStyle
         self.numberFormatter.maximumFractionDigits = 3
         
-        if self.motionManager.accelerometerAvailable {
-            self.setUpAccelerometerMonitoring()
+        if self.motionManager.deviceMotionAvailable {
+            self.setUpDeviceMotionMonitoring()
         }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.motionManager.stopDeviceMotionUpdates()
     }
     
     // MARK: - Helpers
     
-    func setUpAccelerometerMonitoring() {
-        
+    func setUpDeviceMotionMonitoring() {
         if self.motionManager.deviceMotionAvailable {
             self.motionManager.deviceMotionUpdateInterval = 0.01
             self.motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) {

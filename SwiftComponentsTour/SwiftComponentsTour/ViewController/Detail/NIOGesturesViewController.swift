@@ -18,9 +18,9 @@ class NIOGesturesViewController: UIViewController {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var square: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.calculateSquareConstraintsCentered()
     }
@@ -41,11 +41,13 @@ class NIOGesturesViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func longPressed(sender: AnyObject) {
-        self.widthConstraint.constant = 50
-        self.heightConstraint.constant = 50
-        self.square.transform = CGAffineTransformMakeRotation(0)
-        self.square.backgroundColor = UIColor.blueColor()
-        self.calculateSquareConstraintsCentered()
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.widthConstraint.constant = 100
+            self.heightConstraint.constant = 100
+            self.square.transform = CGAffineTransformMakeRotation(0)
+            self.square.backgroundColor = UIColor.blueColor()
+            self.calculateSquareConstraintsCentered()
+        })
     }
     
     @IBAction func pinchedSquare(sender: UIPinchGestureRecognizer) {
@@ -63,14 +65,10 @@ class NIOGesturesViewController: UIViewController {
     
     @IBAction func pannedSquare(sender: UIPanGestureRecognizer) {
         var pointInView = sender.translationInView(self.view)
-        var pointInSquare = sender.translationInView(self.square)
         self.topConstraint.constant += pointInView.y
         self.bottomConstraint.constant = self.view.bounds.size.height - self.topConstraint.constant - self.heightConstraint.constant
         self.leftConstraint.constant += pointInView.x
         self.rightConstraint.constant = self.view.bounds.size.width - self.leftConstraint.constant - self.widthConstraint.constant
-        
-        NSLog("\(self.topConstraint.constant), \(self.bottomConstraint.constant)")
-        NSLog("\(self.leftConstraint.constant), \(self.rightConstraint.constant)")
         
         sender.setTranslation(CGPointZero, inView: self.view)
         self.square.layoutIfNeeded()

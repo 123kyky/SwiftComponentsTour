@@ -58,7 +58,7 @@ class NIOStepperViewController: UIViewController, UITextFieldDelegate {
             return true
         }
         
-        let characterSet = NSCharacterSet(charactersInString: "0123456789")
+        let characterSet = NSCharacterSet(charactersInString: "-0123456789")
         for unichar in string.utf16 {
             if  characterSet.characterIsMember(unichar) {
                 return true
@@ -70,6 +70,12 @@ class NIOStepperViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         return true
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        super.touchesBegan(touches, withEvent: event)
+        
+        self.view.endEditing(true)
     }
     
     // MARK: - Formatting and function

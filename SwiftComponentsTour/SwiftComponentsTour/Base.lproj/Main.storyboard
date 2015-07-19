@@ -448,6 +448,10 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Qm-c0f">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gvG-SF-Aee">
                                 <rect key="frame" x="157" y="144" width="286" height="29"/>
                                 <constraints>
@@ -475,10 +479,6 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                     <action selector="mixSegmentDidChange:" destination="HLN-CR-j2f" eventType="valueChanged" id="SaG-Yf-dJJ"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Qm-c0f">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -530,7 +530,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your fave number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-FT-3of">
                                 <rect key="frame" x="193" y="121" width="215" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="numberTextFieldDidChange:" destination="qAz-Ur-KXd" eventType="editingChanged" id="IRN-M8-Vco"/>
                                     <outlet property="delegate" destination="qAz-Ur-KXd" id="zlQ-Rk-ad5"/>
@@ -954,21 +954,6 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7" customClass="NIOGesturedSquareView" customModule="SwiftComponentsTour" customModuleProvider="target">
-                                <rect key="frame" x="275" y="275" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="a7S-4j-N7Q"/>
-                                    <constraint firstAttribute="height" constant="50" id="lLw-ep-utc"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jwV-q7-SqU" appends="YES" id="Qvc-KV-mxD"/>
-                                    <outletCollection property="gestureRecognizers" destination="lh3-Wr-fb7" appends="YES" id="hIj-Rk-5tO"/>
-                                    <outletCollection property="gestureRecognizers" destination="xbK-47-ocP" appends="YES" id="n5P-mp-Cog"/>
-                                    <outletCollection property="gestureRecognizers" destination="c1J-Tc-UMI" appends="YES" id="Qsk-rX-fYC"/>
-                                </connections>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to change the color. Pinch to resize. Pan to drag. Rotate to rotate. Long press to reset." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-aA-3dg">
                                 <rect key="frame" x="160" y="557" width="280" height="35"/>
                                 <constraints>
@@ -979,16 +964,31 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7" customClass="NIOGesturedSquareView" customModule="SwiftComponentsTour" customModuleProvider="target">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="a7S-4j-N7Q"/>
+                                    <constraint firstAttribute="height" constant="100" id="lLw-ep-utc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jwV-q7-SqU" appends="YES" id="Qvc-KV-mxD"/>
+                                    <outletCollection property="gestureRecognizers" destination="lh3-Wr-fb7" appends="YES" id="hIj-Rk-5tO"/>
+                                    <outletCollection property="gestureRecognizers" destination="xbK-47-ocP" appends="YES" id="n5P-mp-Cog"/>
+                                    <outletCollection property="gestureRecognizers" destination="c1J-Tc-UMI" appends="YES" id="Qsk-rX-fYC"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="RgU-aA-3dg" secondAttribute="bottom" constant="8" symbolic="YES" id="Fty-sE-3ac"/>
-                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="leading" secondItem="i8T-OJ-n6d" secondAttribute="leading" constant="275" id="KXU-F2-rpA"/>
-                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="top" secondItem="7Ey-E4-JLA" secondAttribute="top" constant="255" id="QVB-GQ-cli"/>
-                            <constraint firstAttribute="trailing" secondItem="rEc-Yq-bV7" secondAttribute="trailing" constant="275" id="S2p-xG-rsR"/>
+                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="leading" secondItem="i8T-OJ-n6d" secondAttribute="leading" constant="250" id="KXU-F2-rpA"/>
+                            <constraint firstItem="rEc-Yq-bV7" firstAttribute="top" secondItem="7Ey-E4-JLA" secondAttribute="top" constant="230" id="QVB-GQ-cli"/>
+                            <constraint firstAttribute="trailing" secondItem="rEc-Yq-bV7" secondAttribute="trailing" constant="250" id="S2p-xG-rsR"/>
                             <constraint firstItem="RgU-aA-3dg" firstAttribute="centerX" secondItem="rEc-Yq-bV7" secondAttribute="centerX" id="VS4-Fz-mCc"/>
-                            <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="rEc-Yq-bV7" secondAttribute="bottom" constant="275" id="Wdg-zl-yLJ"/>
+                            <constraint firstItem="CRX-hJ-asH" firstAttribute="top" secondItem="rEc-Yq-bV7" secondAttribute="bottom" constant="250" id="Wdg-zl-yLJ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="gXI-L4-3ng" appends="YES" id="f7h-oT-PqG"/>
@@ -1007,27 +1007,27 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lf-yn-uWV" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gXI-L4-3ng">
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" allowableMovement="10" minimumPressDuration="0.5" id="gXI-L4-3ng">
                     <connections>
                         <action selector="longPressed:" destination="T1f-Sf-f1U" id="Qp4-ti-gwf"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pinchGestureRecognizer id="jwV-q7-SqU">
+                <pinchGestureRecognizer cancelsTouchesInView="NO" id="jwV-q7-SqU">
                     <connections>
                         <action selector="pinchedSquare:" destination="T1f-Sf-f1U" id="oKN-Bl-sY5"/>
                     </connections>
                 </pinchGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="lh3-Wr-fb7">
+                <panGestureRecognizer cancelsTouchesInView="NO" minimumNumberOfTouches="1" id="lh3-Wr-fb7">
                     <connections>
                         <action selector="pannedSquare:" destination="T1f-Sf-f1U" id="QYu-A0-8MB"/>
                     </connections>
                 </panGestureRecognizer>
-                <rotationGestureRecognizer id="xbK-47-ocP">
+                <rotationGestureRecognizer cancelsTouchesInView="NO" id="xbK-47-ocP">
                     <connections>
                         <action selector="rotatedSquare:" destination="T1f-Sf-f1U" id="bKU-d7-axX"/>
                     </connections>
                 </rotationGestureRecognizer>
-                <tapGestureRecognizer id="c1J-Tc-UMI">
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="c1J-Tc-UMI">
                     <connections>
                         <action selector="tappedSquare:" destination="T1f-Sf-f1U" id="Vjx-dY-u9B"/>
                     </connections>
@@ -1056,44 +1056,44 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXv-sC-CnS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXv-sC-CnS">
                                 <rect key="frame" x="167" y="271" width="9" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D41-Oa-YF0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D41-Oa-YF0">
                                 <rect key="frame" x="296" y="270" width="9" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="z" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbt-y5-bAz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="z" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbt-y5-bAz">
                                 <rect key="frame" x="425" y="271" width="8.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-8U-abj">
-                                <rect key="frame" x="149" y="299.5" width="43" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-8U-abj">
+                                <rect key="frame" x="149" y="299" width="43" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-t6-15B">
-                                <rect key="frame" x="278" y="298.5" width="43" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-t6-15B">
+                                <rect key="frame" x="278" y="298" width="43" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC5-rt-o5G">
-                                <rect key="frame" x="407" y="299.5" width="43" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC5-rt-o5G">
+                                <rect key="frame" x="407" y="299" width="43" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-31-dYX">
-                                <rect key="frame" x="281" y="361" width="39" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-31-dYX">
+                                <rect key="frame" x="280" y="418" width="39" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Zero">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1105,7 +1105,6 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2ge-31-dYX" firstAttribute="top" secondItem="ccv-t6-15B" secondAttribute="bottom" constant="42" id="0qK-Jn-eLE"/>
                             <constraint firstItem="ccv-t6-15B" firstAttribute="top" secondItem="D41-Oa-YF0" secondAttribute="bottom" constant="8" id="1DM-vh-ZLa"/>
                             <constraint firstItem="WXv-sC-CnS" firstAttribute="centerY" secondItem="D41-Oa-YF0" secondAttribute="centerY" constant="1" id="4NF-zo-fMK"/>
                             <constraint firstItem="WXv-sC-CnS" firstAttribute="baseline" secondItem="D41-Oa-YF0" secondAttribute="baseline" id="6UM-dl-FqG"/>
@@ -1114,6 +1113,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstAttribute="centerX" secondItem="ccv-t6-15B" secondAttribute="centerX" id="Ezp-ZJ-DWr"/>
                             <constraint firstAttribute="centerX" secondItem="e8I-gb-FZR" secondAttribute="centerX" constant="-0.5" id="Rlq-WA-ksb"/>
                             <constraint firstItem="qbt-y5-bAz" firstAttribute="centerY" secondItem="D41-Oa-YF0" secondAttribute="centerY" constant="1" id="TH3-uU-fbI"/>
+                            <constraint firstItem="MUH-Ae-qlF" firstAttribute="top" secondItem="2ge-31-dYX" secondAttribute="bottom" constant="79" id="TVw-il-njl"/>
                             <constraint firstAttribute="centerX" secondItem="2ge-31-dYX" secondAttribute="centerX" id="b5E-ji-04Z"/>
                             <constraint firstItem="qbt-y5-bAz" firstAttribute="centerX" secondItem="WC5-rt-o5G" secondAttribute="centerX" constant="0.5" id="eyw-5M-QRz"/>
                             <constraint firstItem="IK3-8U-abj" firstAttribute="centerX" secondItem="WXv-sC-CnS" secondAttribute="centerX" constant="-0.5" id="gGW-lP-4ho"/>
@@ -1121,7 +1121,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstAttribute="centerX" secondItem="MUH-Ae-qlF" secondAttribute="centerX" constant="-0.5" id="j2B-2P-stA"/>
                             <constraint firstAttribute="centerX" secondItem="D41-Oa-YF0" secondAttribute="centerX" constant="-0.5" id="lv1-qN-UEt"/>
                             <constraint firstItem="e8I-gb-FZR" firstAttribute="top" secondItem="MUH-Ae-qlF" secondAttribute="bottom" constant="8" id="n2C-Pg-9dp"/>
-                            <constraint firstItem="D41-Oa-YF0" firstAttribute="top" secondItem="V8X-2j-6XO" secondAttribute="bottom" constant="206" id="roM-5j-8rv"/>
+                            <constraint firstItem="D41-Oa-YF0" firstAttribute="top" secondItem="V8X-2j-6XO" secondAttribute="bottom" constant="250" id="roM-5j-8rv"/>
                             <constraint firstItem="IK3-8U-abj" firstAttribute="top" secondItem="WXv-sC-CnS" secondAttribute="bottom" constant="8" id="smM-98-reI"/>
                             <constraint firstItem="TXh-nx-9fL" firstAttribute="top" secondItem="e8I-gb-FZR" secondAttribute="bottom" constant="8" id="zYh-Cj-bYD"/>
                         </constraints>
