@@ -47,4 +47,4 @@ A section for components that may not technically be UIControls but can be used 
 ##Screencasts
 Videos about the app will be posted to our [YouTube Channel](https://www.youtube.com/channel/UCUMAujrLQP-zB925se5YIiQ). Most of the videos are short (5-6 minutes or less) and are intended to help you learn more about iOS development. Feel free to subscribe, leave feedback and learn!
 
-See our other, more advanced app to really see what you can do with iOS (https://github.com/JeffBNimble/LoLBookOfChampions-ios-sqlite/blob/master/Readme.md).
+See our other, more advanced app to really see what you can do with iOS. (https://github.com/JeffBNimble/LoLBookOfChampions-ios-sqlite)
