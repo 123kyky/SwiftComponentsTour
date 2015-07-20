@@ -66,7 +66,7 @@
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="BNB-u9-u4d"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="0AR-EQ-z8G" secondAttribute="bottom" constant="127" id="CT2-mM-yeu"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="4" id="Ew3-Lu-xVC"/>
-                            <constraint firstItem="fpl-jB-Jbd" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="93" id="GB8-SP-sak"/>
+                            <constraint firstItem="fpl-jB-Jbd" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="49" id="GB8-SP-sak"/>
                             <constraint firstItem="0AR-EQ-z8G" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="HVT-ur-88t"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="fpl-jB-Jbd" secondAttribute="bottom" constant="97" id="MJ0-Aa-gAE"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerX" secondItem="0AR-EQ-z8G" secondAttribute="centerX" id="ail-En-3pz"/>
@@ -920,14 +920,14 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstItem="zK6-DK-zin" firstAttribute="top" secondItem="nu6-tJ-XKZ" secondAttribute="bottom" constant="8" symbolic="YES" id="6UE-Si-LMH"/>
                             <constraint firstItem="QB3-0D-aIf" firstAttribute="top" secondItem="9Y6-Ex-8Cm" secondAttribute="bottom" constant="217" id="7Et-Xl-k9k"/>
                             <constraint firstAttribute="trailing" secondItem="zK6-DK-zin" secondAttribute="trailing" id="FlO-fl-nia"/>
+                            <constraint firstAttribute="centerX" secondItem="zK6-DK-zin" secondAttribute="centerX" id="PUQ-B0-CvY"/>
                             <constraint firstItem="9Y6-Ex-8Cm" firstAttribute="centerX" secondItem="zK6-DK-zin" secondAttribute="centerX" id="Pb2-72-qHc"/>
-                            <constraint firstItem="nu6-tJ-XKZ" firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" id="Rwv-2h-F6F"/>
                             <constraint firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" constant="-0.5" id="dSp-ua-q3D"/>
                             <constraint firstItem="nu6-tJ-XKZ" firstAttribute="top" secondItem="bI8-ky-j8a" secondAttribute="bottom" constant="8" symbolic="YES" id="nGK-n3-i7N"/>
+                            <constraint firstAttribute="centerX" secondItem="nu6-tJ-XKZ" secondAttribute="centerX" constant="-0.5" id="tjc-SS-ggA"/>
                             <constraint firstItem="zK6-DK-zin" firstAttribute="leading" secondItem="SEn-78-ibk" secondAttribute="leading" id="txM-EG-EpN"/>
                             <constraint firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" constant="-0.5" id="xSA-cJ-du5"/>
                             <constraint firstItem="bI8-ky-j8a" firstAttribute="top" secondItem="YoJ-jz-Wo4" secondAttribute="bottom" constant="89" id="xkG-cD-bLH"/>
-                            <constraint firstItem="nu6-tJ-XKZ" firstAttribute="centerX" secondItem="zK6-DK-zin" secondAttribute="centerX" id="zy1-OW-NH8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -964,7 +964,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7" customClass="NIOGesturedSquareView" customModule="SwiftComponentsTour" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-Yq-bV7">
                                 <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>

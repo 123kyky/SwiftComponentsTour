@@ -28,8 +28,6 @@ class NIOGesturesViewController: UIViewController {
     // MARK: - Helpers
     
     func calculateSquareConstraintsCentered() {
-        self.view.layoutIfNeeded()
-        
         self.topConstraint.constant = self.view.bounds.size.height / 2 - self.heightConstraint.constant / 2
         self.bottomConstraint.constant = self.view.bounds.size.height - self.topConstraint.constant - self.heightConstraint.constant
         self.leftConstraint.constant = self.view.bounds.size.width / 2 - self.widthConstraint.constant / 2

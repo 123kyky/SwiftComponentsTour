@@ -48,7 +48,7 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         case 0:
             title = "Text Components"
         case 1:
-            title = "Basic Interation"
+            title = "Controls"
         case 2:
             title = "Advanced Interaction"
         default:
