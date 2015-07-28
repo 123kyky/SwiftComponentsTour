@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		71B3F48B1B4ACD640021E73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F48A1B4ACD640021E73B /* AppDelegate.swift */; };
-		71B3F4921B4ACD640021E73B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B3F4901B4ACD640021E73B /* Main.storyboard */; };
-		71B3F4941B4ACD640021E73B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B3F4931B4ACD640021E73B /* Images.xcassets */; };
-		71B3F4971B4ACD640021E73B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B3F4951B4ACD640021E73B /* LaunchScreen.xib */; };
 		71B3F4A31B4ACD640021E73B /* SwiftComponentsTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4A21B4ACD640021E73B /* SwiftComponentsTourTests.swift */; };
 		71B3F4B01B4AE87C0021E73B /* NIOMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4AE1B4AE87C0021E73B /* NIOMasterViewController.swift */; };
 		71B3F4B41B4AE9FF0021E73B /* NIOLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4B31B4AE9FF0021E73B /* NIOLabelViewController.swift */; };
@@ -25,6 +22,9 @@
 		71B3F4C61B4AEA810021E73B /* NIOPickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C51B4AEA810021E73B /* NIOPickersViewController.swift */; };
 		71B3F4C81B4AEA900021E73B /* NIOGesturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C71B4AEA900021E73B /* NIOGesturesViewController.swift */; };
 		71B3F4CA1B4AEA9B0021E73B /* NIOAccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4C91B4AEA9B0021E73B /* NIOAccelerometerViewController.swift */; };
+		CBF91BEB1B68096400B442F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF91BE71B68096400B442F0 /* LaunchScreen.xib */; };
+		CBF91BEC1B68096400B442F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF91BE91B68096400B442F0 /* Main.storyboard */; };
+		CBF91BEE1B68096C00B442F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF91BED1B68096C00B442F0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,6 @@
 		71B3F4851B4ACD640021E73B /* SwiftComponentsTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftComponentsTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B3F4891B4ACD640021E73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71B3F48A1B4ACD640021E73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71B3F4911B4ACD640021E73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71B3F4931B4ACD640021E73B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
-		71B3F4961B4ACD640021E73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		71B3F49C1B4ACD640021E73B /* SwiftComponentsTourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftComponentsTourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B3F4A11B4ACD640021E73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71B3F4A21B4ACD640021E73B /* SwiftComponentsTourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftComponentsTourTests.swift; sourceTree = "<group>"; };
@@ -60,6 +57,9 @@
 		71B3F4C51B4AEA810021E73B /* NIOPickersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOPickersViewController.swift; sourceTree = "<group>"; };
 		71B3F4C71B4AEA900021E73B /* NIOGesturesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOGesturesViewController.swift; sourceTree = "<group>"; };
 		71B3F4C91B4AEA9B0021E73B /* NIOAccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOAccelerometerViewController.swift; sourceTree = "<group>"; };
+		CBF91BE81B68096400B442F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = SwiftComponentsTour/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		CBF91BEA1B68096400B442F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SwiftComponentsTour/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		CBF91BED1B68096C00B442F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SwiftComponentsTour/Images.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +146,9 @@
 		71B3F4B11B4AE88E0021E73B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				71B3F4901B4ACD640021E73B /* Main.storyboard */,
-				71B3F4951B4ACD640021E73B /* LaunchScreen.xib */,
-				71B3F4931B4ACD640021E73B /* Images.xcassets */,
+				CBF91BE71B68096400B442F0 /* LaunchScreen.xib */,
+				CBF91BE91B68096400B442F0 /* Main.storyboard */,
+				CBF91BED1B68096C00B442F0 /* Images.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -253,9 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B3F4921B4ACD640021E73B /* Main.storyboard in Resources */,
-				71B3F4971B4ACD640021E73B /* LaunchScreen.xib in Resources */,
-				71B3F4941B4ACD640021E73B /* Images.xcassets in Resources */,
+				CBF91BEE1B68096C00B442F0 /* Images.xcassets in Resources */,
+				CBF91BEB1B68096400B442F0 /* LaunchScreen.xib in Resources */,
+				CBF91BEC1B68096400B442F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,22 +309,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		71B3F4901B4ACD640021E73B /* Main.storyboard */ = {
+		CBF91BE71B68096400B442F0 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				71B3F4911B4ACD640021E73B /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		71B3F4951B4ACD640021E73B /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71B3F4961B4ACD640021E73B /* Base */,
+				CBF91BE81B68096400B442F0 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = ..;
+			sourceTree = "<group>";
+		};
+		CBF91BE91B68096400B442F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBF91BEA1B68096400B442F0 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
