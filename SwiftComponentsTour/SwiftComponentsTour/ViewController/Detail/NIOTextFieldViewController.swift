@@ -57,6 +57,7 @@ class NIOTextFieldViewController: UIViewController, UITextFieldDelegate {
             self.timer!.invalidate()
             self.statusLabel.text = "\(firstNumber! + secondNumber!)"
         } else {
+            self.timer!.invalidate()
             self.startAnimatingLabel()
         }
     }
