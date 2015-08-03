@@ -9,7 +9,7 @@
 import UIKit
 import CoreMotion
 
-class NIOAccelerometerViewController: UIViewController {
+class NIOAccelerometerViewController: NIOBaseDetailViewController {
 
     @IBOutlet weak var xValueLabel: UILabel!
     @IBOutlet weak var yValueLabel: UILabel!

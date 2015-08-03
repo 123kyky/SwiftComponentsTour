@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOLabelViewController: UIViewController {
+class NIOLabelViewController: NIOBaseDetailViewController {
 
     @IBOutlet weak var attributedLabel: UILabel!
     

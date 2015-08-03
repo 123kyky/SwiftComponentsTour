@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOButtonViewController: UIViewController {
+class NIOButtonViewController: NIOBaseDetailViewController {
 
     // MARK: - Actions
     

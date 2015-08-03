@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOPickersViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class NIOPickersViewController: NIOBaseDetailViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var pickerDisplayLabel: UILabel!
     @IBOutlet weak var dateTextField: UITextField!

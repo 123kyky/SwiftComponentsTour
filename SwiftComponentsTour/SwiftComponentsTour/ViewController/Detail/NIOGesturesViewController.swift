@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOGesturesViewController: UIViewController {
+class NIOGesturesViewController: NIOBaseDetailViewController {
 
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!

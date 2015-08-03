@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOProgressViewController: UIViewController {
+class NIOProgressViewController: NIOBaseDetailViewController {
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!

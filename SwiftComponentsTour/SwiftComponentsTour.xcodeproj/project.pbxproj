@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71157DD61B6FC4FE00ADAA76 /* NIOBaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71157DD51B6FC4FE00ADAA76 /* NIOBaseDetailViewController.swift */; };
 		71B3F48B1B4ACD640021E73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F48A1B4ACD640021E73B /* AppDelegate.swift */; };
 		71B3F4A31B4ACD640021E73B /* SwiftComponentsTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4A21B4ACD640021E73B /* SwiftComponentsTourTests.swift */; };
 		71B3F4B01B4AE87C0021E73B /* NIOMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3F4AE1B4AE87C0021E73B /* NIOMasterViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71157DD51B6FC4FE00ADAA76 /* NIOBaseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIOBaseDetailViewController.swift; sourceTree = "<group>"; };
 		71B3F4851B4ACD640021E73B /* SwiftComponentsTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftComponentsTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B3F4891B4ACD640021E73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71B3F48A1B4ACD640021E73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				71B3F4C51B4AEA810021E73B /* NIOPickersViewController.swift */,
 				71B3F4C71B4AEA900021E73B /* NIOGesturesViewController.swift */,
 				71B3F4C91B4AEA9B0021E73B /* NIOAccelerometerViewController.swift */,
+				71157DD51B6FC4FE00ADAA76 /* NIOBaseDetailViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				71B3F4BC1B4AEA3E0021E73B /* NIOSwitchViewController.swift in Sources */,
 				71B3F4BE1B4AEA4F0021E73B /* NIOSegmentedControlViewController.swift in Sources */,
 				71B3F4C41B4AEA780021E73B /* NIOProgressViewController.swift in Sources */,
+				71157DD61B6FC4FE00ADAA76 /* NIOBaseDetailViewController.swift in Sources */,
 				71B3F4B61B4AEA170021E73B /* NIOTextFieldViewController.swift in Sources */,
 				71B3F4B01B4AE87C0021E73B /* NIOMasterViewController.swift in Sources */,
 				71B3F4B81B4AEA220021E73B /* NIOTextViewViewController.swift in Sources */,

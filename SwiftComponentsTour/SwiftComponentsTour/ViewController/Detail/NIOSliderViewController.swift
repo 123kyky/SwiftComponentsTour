@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOSliderViewController: UIViewController {
+class NIOSliderViewController: NIOBaseDetailViewController {
     
     @IBOutlet weak var spotlightsSlider: UISlider!
     @IBOutlet weak var houseLightsSlider: UISlider!

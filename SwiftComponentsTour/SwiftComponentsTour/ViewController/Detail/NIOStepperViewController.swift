@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOStepperViewController: UIViewController, UITextFieldDelegate {
+class NIOStepperViewController: NIOBaseDetailViewController, UITextFieldDelegate {
 
     @IBOutlet weak var numberStepper: UIStepper!
     @IBOutlet weak var dateStepper: UIStepper!

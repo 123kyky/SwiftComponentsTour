@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOSegmentedControlViewController: UIViewController {
+class NIOSegmentedControlViewController: NIOBaseDetailViewController {
 
     @IBOutlet weak var baseSegmentedButton: UISegmentedControl!
     @IBOutlet weak var mixSegmentedButton: UISegmentedControl!

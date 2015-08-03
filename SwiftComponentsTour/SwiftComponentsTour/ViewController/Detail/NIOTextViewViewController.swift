@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOTextViewViewController: UIViewController, UITextViewDelegate {
+class NIOTextViewViewController: NIOBaseDetailViewController, UITextViewDelegate {
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     

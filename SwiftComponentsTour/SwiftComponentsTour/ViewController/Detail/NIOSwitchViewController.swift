@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOSwitchViewController: UIViewController {
+class NIOSwitchViewController: NIOBaseDetailViewController {
 
     @IBOutlet weak var spotlightSwitch: UISwitch!
     @IBOutlet weak var houseLightsSwitch: UIButton!

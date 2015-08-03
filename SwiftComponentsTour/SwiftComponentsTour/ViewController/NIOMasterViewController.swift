@@ -28,12 +28,20 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         super.awakeFromNib()
         self.clearsSelectionOnViewWillAppear = false
         self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
+        self.title = "Swift Components Tour"
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.splitViewController!.delegate = self
+        self.tableView.registerClass(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "Header")
+        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "NimbleNoggin.io.background")!)
+        self.tableView.tableFooterView = UIView()
+        
+        self.navigationController!.navigationBar.barTintColor = UIColor(red:1, green:0.66, blue:0.18, alpha:1)
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        ((self.splitViewController!.viewControllers.last as! UINavigationController).viewControllers.first as! UIViewController).title = self.sections[0][0]
     }
 
     // MARK: - Table View
@@ -42,20 +50,33 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         return sections.count
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var header: UITableViewHeaderFooterView? = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as? UITableViewHeaderFooterView
+        header?.contentView.backgroundColor = UIColor(red:0.58, green:0.78, blue:0.12, alpha:1)
+        var label: UILabel = UILabel(frame: CGRectMake(10, 13, 0, 0))
+        label.textColor = UIColor.whiteColor()
+        label.font = label.font.fontWithSize(20)
+        header?.contentView.addSubview(label)
+        
         let title: String?
         switch (section) {
         case 0:
-            title = "Text Components"
+            label.text = "Text Components"
         case 1:
-            title = "Controls"
+            label.text = "Controls"
         case 2:
-            title = "Advanced Interaction"
+            label.text = "Advanced Interaction"
         default:
-            title = ""
+            label.text = ""
         }
         
-        return title
+        label.sizeToFit()
+        
+        return header
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,18 +88,24 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel!.text = sections[indexPath.section][indexPath.row]
+        cell.contentView.backgroundColor = UIColor.clearColor()
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.splitViewController?.collapseSecondaryViewController(self.splitViewController?.viewControllers.first as! UIViewController, forSplitViewController: self.splitViewController!)
         
         let controller: UIViewController? = storyboard?.instantiateViewControllerWithIdentifier(sections[indexPath.section][indexPath.row]) as? UIViewController
-        (splitViewController!.viewControllers.last as! UINavigationController).setViewControllers([controller!], animated: true)
+        (self.splitViewController!.viewControllers.last as! UINavigationController).setViewControllers([controller!], animated: true)
         controller!.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
         controller!.navigationItem.leftItemsSupplementBackButton = true
-        controller!.title = sections[indexPath.section][indexPath.row]
+        controller!.title = self.sections[indexPath.section][indexPath.row]
     }
 
 }

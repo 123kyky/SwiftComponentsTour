@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NIOTextFieldViewController: UIViewController, UITextFieldDelegate {
+class NIOTextFieldViewController: NIOBaseDetailViewController, UITextFieldDelegate {
 
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var firstTextField: UITextField!
