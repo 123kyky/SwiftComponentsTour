@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
+                        <segue destination="Rxq-i7-MKx" kind="relationship" relationship="rootViewController" id="lpC-fV-XmS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
@@ -100,42 +100,61 @@
             <point key="canvasLocation" x="-768" y="-630"/>
         </scene>
         <!--Master-->
-        <scene sceneID="smW-Zh-WAh">
+        <scene sceneID="DUA-gF-Tw0">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="NIOMasterViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                <viewController id="Rxq-i7-MKx" customClass="NIOMasterViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qu9-cP-u9h"/>
+                        <viewControllerLayoutGuide type="bottom" id="V66-gK-aWi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vgp-wr-Zbe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r7i-6Z-zg0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
-                            <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rxq-i7-MKx" id="Z5q-dx-tSZ"/>
+                                    <outlet property="delegate" destination="Rxq-i7-MKx" id="RYn-wo-hbn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V66-gK-aWi" firstAttribute="top" secondItem="r7i-6Z-zg0" secondAttribute="bottom" id="AhM-RA-c7Q"/>
+                            <constraint firstItem="r7i-6Z-zg0" firstAttribute="top" secondItem="qu9-cP-u9h" secondAttribute="bottom" constant="-64" id="ApD-OM-BxL"/>
+                            <constraint firstItem="r7i-6Z-zg0" firstAttribute="leading" secondItem="Vgp-wr-Zbe" secondAttribute="leading" id="BgI-u9-tH3"/>
+                            <constraint firstItem="r7i-6Z-zg0" firstAttribute="width" secondItem="Vgp-wr-Zbe" secondAttribute="width" id="WPu-mO-m8u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Master" id="oqk-2Q-Lok"/>
+                    <connections>
+                        <outlet property="tableView" destination="r7i-6Z-zg0" id="VIu-gr-PDh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCs-Us-n1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="694" y="-630"/>
         </scene>
@@ -373,6 +392,26 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-h2-kea">
+                                <rect key="frame" x="190" y="279" width="219" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="3kA-l7-ube"/>
+                                    <constraint firstAttribute="height" constant="43" id="3sp-KE-BG0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="303-Fz-vTq">
+                                <rect key="frame" x="191" y="354" width="219" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pO-E3-hLu">
+                                <rect key="frame" x="191" y="422" width="219" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-fP-g49">
+                                <rect key="frame" x="191" y="488" width="219" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-2a-rZE">
                                 <rect key="frame" x="199" y="285" width="202" height="30"/>
                                 <state key="normal" title="Randomize background color">
@@ -400,19 +439,72 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                     <action selector="addBackgroundImage:" destination="hDO-Go-tTl" eventType="touchUpInside" id="Ylz-dA-oM3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7a-c5-NlN">
+                                <rect key="frame" x="217" y="494" width="166" height="30"/>
+                                <state key="normal" title="Do something awesome">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-5P-GNX">
+                                <rect key="frame" x="123" y="42" width="351" height="209"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJK-cN-myU">
+                                        <rect key="frame" x="15" y="15" width="320" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="8ct-td-JV0"/>
+                                            <constraint firstAttribute="height" constant="180" id="sPK-Yr-aYs"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="NimbleNoggin.io.banner">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="351" id="OdM-Rj-cex"/>
+                                    <constraint firstAttribute="centerX" secondItem="FJK-cN-myU" secondAttribute="centerX" constant="0.5" id="QWV-lv-jlv"/>
+                                    <constraint firstAttribute="height" constant="209" id="TGA-f5-1OQ"/>
+                                    <constraint firstAttribute="centerY" secondItem="FJK-cN-myU" secondAttribute="centerY" constant="-0.5" id="kPg-CD-ybK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7Zn-fP-g49" firstAttribute="top" secondItem="E7a-c5-NlN" secondAttribute="top" constant="-6" id="1fk-fc-YWC"/>
+                            <constraint firstAttribute="centerX" secondItem="Tph-5P-GNX" secondAttribute="centerX" constant="1.5" id="2rA-eQ-n1a"/>
+                            <constraint firstItem="7Zn-fP-g49" firstAttribute="leading" secondItem="E7a-c5-NlN" secondAttribute="trailing" constant="-192" id="53k-Fx-5E3"/>
+                            <constraint firstItem="8Ha-h2-kea" firstAttribute="height" secondItem="7Zn-fP-g49" secondAttribute="height" id="7eL-Ld-brZ"/>
+                            <constraint firstItem="303-Fz-vTq" firstAttribute="width" secondItem="8Ha-h2-kea" secondAttribute="width" id="7jM-fX-fDE"/>
                             <constraint firstItem="TAH-L2-hgA" firstAttribute="top" secondItem="DBO-Oe-ggk" secondAttribute="bottom" constant="38" id="91e-um-baP"/>
                             <constraint firstItem="TAH-L2-hgA" firstAttribute="centerX" secondItem="DBO-Oe-ggk" secondAttribute="centerX" id="B5v-wP-F3V"/>
+                            <constraint firstItem="1pO-E3-hLu" firstAttribute="top" secondItem="TAH-L2-hgA" secondAttribute="top" constant="-7" id="Ca4-oY-1eo"/>
+                            <constraint firstItem="303-Fz-vTq" firstAttribute="height" secondItem="8Ha-h2-kea" secondAttribute="height" id="FJe-gW-bvb"/>
+                            <constraint firstItem="mUB-2a-rZE" firstAttribute="top" secondItem="Tph-5P-GNX" secondAttribute="bottom" constant="34" id="MxW-Xb-Y8C"/>
+                            <constraint firstItem="303-Fz-vTq" firstAttribute="top" secondItem="DBO-Oe-ggk" secondAttribute="top" constant="-7" id="Q0U-D5-eYc"/>
                             <constraint firstItem="TAH-L2-hgA" firstAttribute="centerX" secondItem="wqR-VJ-9Z1" secondAttribute="centerX" id="Qj0-yV-gYP"/>
+                            <constraint firstAttribute="centerX" secondItem="E7a-c5-NlN" secondAttribute="centerX" id="RqZ-65-Pr3"/>
+                            <constraint firstAttribute="centerX" secondItem="8Ha-h2-kea" secondAttribute="centerX" constant="0.5" id="STi-st-Ucf"/>
                             <constraint firstItem="mUB-2a-rZE" firstAttribute="centerY" secondItem="wqR-VJ-9Z1" secondAttribute="centerY" id="VbO-Tb-7Dd"/>
                             <constraint firstItem="mUB-2a-rZE" firstAttribute="centerX" secondItem="DBO-Oe-ggk" secondAttribute="centerX" id="YW7-5m-iuX"/>
+                            <constraint firstAttribute="centerX" secondItem="303-Fz-vTq" secondAttribute="centerX" constant="-0.5" id="e5g-n5-env"/>
+                            <constraint firstAttribute="centerX" secondItem="1pO-E3-hLu" secondAttribute="centerX" constant="-0.5" id="fda-N7-LYf"/>
                             <constraint firstItem="DBO-Oe-ggk" firstAttribute="top" secondItem="mUB-2a-rZE" secondAttribute="bottom" constant="46" id="hex-3I-yns"/>
+                            <constraint firstItem="E7a-c5-NlN" firstAttribute="top" secondItem="TAH-L2-hgA" secondAttribute="bottom" constant="35" id="k3Z-je-0eg"/>
+                            <constraint firstItem="8Ha-h2-kea" firstAttribute="top" secondItem="mUB-2a-rZE" secondAttribute="top" constant="-6" id="qwg-8L-6XW"/>
+                            <constraint firstItem="8Ha-h2-kea" firstAttribute="width" secondItem="7Zn-fP-g49" secondAttribute="width" id="xBb-pG-79f"/>
+                            <constraint firstItem="1pO-E3-hLu" firstAttribute="height" secondItem="8Ha-h2-kea" secondAttribute="height" id="ySp-7z-ZpC"/>
+                            <constraint firstItem="1pO-E3-hLu" firstAttribute="width" secondItem="8Ha-h2-kea" secondAttribute="width" id="zlF-tR-Id8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mPG-Nk-cYp"/>
+                    <connections>
+                        <outletCollection property="buttonBackgrounds" destination="8Ha-h2-kea" collectionClass="NSMutableArray" id="hXU-ml-iR7"/>
+                        <outletCollection property="buttonBackgrounds" destination="303-Fz-vTq" collectionClass="NSMutableArray" id="j3r-xb-baA"/>
+                        <outletCollection property="buttonBackgrounds" destination="1pO-E3-hLu" collectionClass="NSMutableArray" id="1ki-be-p0D"/>
+                        <outletCollection property="buttonBackgrounds" destination="Tph-5P-GNX" collectionClass="NSMutableArray" id="IOv-4w-yB1"/>
+                        <outletCollection property="buttonBackgrounds" destination="7Zn-fP-g49" collectionClass="NSMutableArray" id="EVq-ra-WMi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9a-u7-w0G" sceneMemberID="firstResponder"/>
             </objects>
@@ -1146,6 +1238,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
         </scene>
     </scenes>
     <resources>
+        <image name="NimbleNoggin.io.banner" width="2560" height="1440"/>
         <image name="spotlight" width="600" height="404"/>
     </resources>
 </document>

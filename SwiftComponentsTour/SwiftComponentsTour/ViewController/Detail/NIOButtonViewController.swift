@@ -9,6 +9,17 @@
 import UIKit
 
 class NIOButtonViewController: NIOBaseDetailViewController {
+    @IBOutlet var buttonBackgrounds: [UIView]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for view in self.buttonBackgrounds {
+            view.layer.borderColor = UIColor.whiteColor().CGColor
+            view.layer.borderWidth = 2
+            view.layer.cornerRadius = 5
+        }
+    }
 
     // MARK: - Actions
     
@@ -17,7 +28,7 @@ class NIOButtonViewController: NIOBaseDetailViewController {
     }
     
     @IBAction func addBackgroundImage(sender: AnyObject) {
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "secretBackgroundImage")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "NimbleNoggin.io.background")!)
     }
     
     @IBAction func changeTitle(sender: AnyObject) {

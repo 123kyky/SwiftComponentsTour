@@ -8,7 +8,10 @@
 
 import UIKit
 
-class NIOMasterViewController: UITableViewController, UISplitViewControllerDelegate {
+class NIOMasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISplitViewControllerDelegate {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
     var sections = [
         ["Labels",
             "Text Fields",
@@ -26,17 +29,18 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.clearsSelectionOnViewWillAppear = false
+        
         self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
         self.title = "Swift Components Tour"
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.splitViewController!.delegate = self
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "NimbleNoggin.io.background")!)
+        self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.registerClass(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "Header")
-        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "NimbleNoggin.io.background")!)
         self.tableView.tableFooterView = UIView()
         
         self.navigationController!.navigationBar.barTintColor = UIColor(red:1, green:0.66, blue:0.18, alpha:1)
@@ -46,11 +50,11 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
 
     // MARK: - Table View
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sections.count
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var header: UITableViewHeaderFooterView? = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as? UITableViewHeaderFooterView
         header?.contentView.backgroundColor = UIColor(red:0.58, green:0.78, blue:0.12, alpha:1)
         var label: UILabel = UILabel(frame: CGRectMake(10, 13, 0, 0))
@@ -75,16 +79,16 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         return header
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = sections[section]
         return section.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel!.text = sections[indexPath.section][indexPath.row]
@@ -94,11 +98,14 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         return cell
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        cell.contentView.backgroundColor = UIColor(red:0.58, green:0.78, blue:0.12, alpha:0.5)
+        
         self.splitViewController?.collapseSecondaryViewController(self.splitViewController?.viewControllers.first as! UIViewController, forSplitViewController: self.splitViewController!)
         
         let controller: UIViewController? = storyboard?.instantiateViewControllerWithIdentifier(sections[indexPath.section][indexPath.row]) as? UIViewController
@@ -106,6 +113,11 @@ class NIOMasterViewController: UITableViewController, UISplitViewControllerDeleg
         controller!.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
         controller!.navigationItem.leftItemsSupplementBackButton = true
         controller!.title = self.sections[indexPath.section][indexPath.row]
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        cell.contentView.backgroundColor = UIColor.clearColor()
     }
 
 }
