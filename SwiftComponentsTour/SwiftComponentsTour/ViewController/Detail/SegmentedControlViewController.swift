@@ -1,5 +1,5 @@
 //
-//  NIOSegmentedControlViewController.swift
+//  SegmentedControlViewController.swift
 //  SwiftComponentsTour
 //
 //  Created by Kyle Roberts on 7/6/15.

@@ -1,5 +1,5 @@
 //
-//  NIOMasterViewController.swift
+//  MasterViewController.swift
 //  SwiftComponentsTour
 //
 //  Created by Kyle Roberts on 7/6/15.
@@ -10,17 +10,16 @@ import UIKit
 
 class NIOMasterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISplitViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var backgroundImageView: UIImageView!
     
     var sections = [
-        ["Labels",
-            "Text Fields",
-            "Text Views"],
-        ["Buttons",
-            "Switches",
-            "Sliders",
-            "Segmented Controls",
-            "Steppers"],
+        ["Labels (UILabel)",
+            "Text Fields (UITextField)",
+            "Text Views (UITextView)"],
+        ["Buttons (UIButton)",
+            "Switches (UISwitch)",
+            "Sliders (UISlider)",
+            "Segmented Controls (UISegmentedControl)",
+            "Steppers (UIStepper)"],
         ["Progress and Activity",
             "Pickers",
             "Gestures",

@@ -1,5 +1,5 @@
 //
-//  NIOBaseDetailViewController.swift
+//  BaseDetailViewController.swift
 //  SwiftComponentsTour
 //
 //  Created by Kyle Roberts on 8/3/15.

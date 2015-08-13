@@ -23,7 +23,7 @@
         <!--Label-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController storyboardIdentifier="Labels" title="Label" id="JEX-9P-axG" customClass="NIOLabelViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Labels (UILabel)" title="Label" id="JEX-9P-axG" customClass="NIOLabelViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -188,7 +188,7 @@
         <!--Text Field-->
         <scene sceneID="Ug8-Vm-uZa">
             <objects>
-                <viewController storyboardIdentifier="Text Fields" title="Text Field" id="vqU-FE-fiw" customClass="NIOTextFieldViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Text Fields (UITextField)" title="Text Field" id="vqU-FE-fiw" customClass="NIOTextFieldViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MEn-54-5r8"/>
                         <viewControllerLayoutGuide type="bottom" id="jxR-UK-4Pk"/>
@@ -276,7 +276,7 @@
         <!--Text View-->
         <scene sceneID="oZt-T9-tb1">
             <objects>
-                <viewController storyboardIdentifier="Text Views" title="Text View" id="ZF7-6r-DWN" customClass="NIOTextViewViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Text Views (UITextView)" title="Text View" id="ZF7-6r-DWN" customClass="NIOTextViewViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xjT-bg-wEi"/>
                         <viewControllerLayoutGuide type="bottom" id="h3a-Uh-yaQ"/>
@@ -395,7 +395,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
         <!--Button-->
         <scene sceneID="5w7-Yg-nJg">
             <objects>
-                <viewController storyboardIdentifier="Buttons" title="Button" id="hDO-Go-tTl" customClass="NIOButtonViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Buttons (UIButton)" title="Button" id="hDO-Go-tTl" customClass="NIOButtonViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FiN-7O-Dcq"/>
                         <viewControllerLayoutGuide type="bottom" id="GjE-0K-x0y"/>
@@ -525,7 +525,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
         <!--Segmented Control-->
         <scene sceneID="Bc7-aP-swT">
             <objects>
-                <viewController storyboardIdentifier="Segmented Controls" title="Segmented Control" id="HLN-CR-j2f" customClass="NIOSegmentedControlViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Segmented Controls (UISegmentedControl)" title="Segmented Control" id="HLN-CR-j2f" customClass="NIOSegmentedControlViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qcS-bF-ce9"/>
                         <viewControllerLayoutGuide type="bottom" id="c1y-2u-Xce"/>
@@ -616,7 +616,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
         <!--Stepper-->
         <scene sceneID="h9Z-jc-Dfy">
             <objects>
-                <viewController storyboardIdentifier="Steppers" title="Stepper" id="qAz-Ur-KXd" customClass="NIOStepperViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Steppers (UIStepper)" title="Stepper" id="qAz-Ur-KXd" customClass="NIOStepperViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TQB-dG-LdZ"/>
                         <viewControllerLayoutGuide type="bottom" id="aOa-3B-yjO"/>
@@ -735,7 +735,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
         <!--Switch-->
         <scene sceneID="uJr-wJ-saR">
             <objects>
-                <viewController storyboardIdentifier="Switches" title="Switch" id="eV1-GA-ZDj" customClass="NIOSwitchViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Switches (UISwitch)" title="Switch" id="eV1-GA-ZDj" customClass="NIOSwitchViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="miv-e0-qD3"/>
                         <viewControllerLayoutGuide type="bottom" id="HgN-gR-BoQ"/>
@@ -825,7 +825,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
         <!--Slider-->
         <scene sceneID="lcb-Vl-rSK">
             <objects>
-                <viewController storyboardIdentifier="Sliders" title="Slider" id="0P3-d7-twk" customClass="NIOSliderViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sliders (UISlider)" title="Slider" id="0P3-d7-twk" customClass="NIOSliderViewController" customModule="SwiftComponentsTour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cxq-kQ-3Tr"/>
                         <viewControllerLayoutGuide type="bottom" id="pdq-iT-WcK"/>

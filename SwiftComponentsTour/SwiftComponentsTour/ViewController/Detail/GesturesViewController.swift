@@ -1,5 +1,5 @@
 //
-//  NIOGesturesViewController.swift
+//  GesturesViewController.swift
 //  SwiftComponentsTour
 //
 //  Created by Kyle Roberts on 7/6/15.
