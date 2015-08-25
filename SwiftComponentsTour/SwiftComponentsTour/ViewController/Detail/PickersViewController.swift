@@ -42,7 +42,7 @@ class NIOPickersViewController: NIOBaseDetailViewController, UIPickerViewDataSou
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
+        return self.pickerData.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
