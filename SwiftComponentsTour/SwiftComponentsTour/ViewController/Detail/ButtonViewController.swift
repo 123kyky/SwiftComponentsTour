@@ -32,10 +32,10 @@ class NIOButtonViewController: NIOBaseDetailViewController {
     }
     
     @IBAction func changeTitle(sender: AnyObject) {
-        if self.title == "Buttons" {
+        if self.title == "Buttons (UIButton)" {
             self.title = "Butts"
         } else {
-            self.title = "Buttons"
+            self.title = "Buttons (UIButton)"
         }
     }
     
