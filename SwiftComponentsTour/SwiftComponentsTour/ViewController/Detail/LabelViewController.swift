@@ -22,7 +22,7 @@ class NIOLabelViewController: NIOBaseDetailViewController {
     
     func setAttributedStrings() {
         let font: UIFont = UIFont(name: "Georgia", size: 24)!
-        var attributedString: NSMutableAttributedString = NSMutableAttributedString(string: self.attributedLabel.text!)
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: self.attributedLabel.text!)
         attributedString.addAttributes([NSStrikethroughStyleAttributeName : 2], range: NSMakeRange(7, 4))
         attributedString.addAttributes([NSFontAttributeName : font], range: NSMakeRange(12, 7))
         attributedString.addAttributes([NSForegroundColorAttributeName : UIColor.redColor()], range: NSMakeRange(20, 4))

@@ -49,7 +49,7 @@ class NIOGesturesViewController: NIOBaseDetailViewController {
     }
     
     @IBAction func pinchedSquare(sender: UIPinchGestureRecognizer) {
-        var difference = -(self.widthConstraint.constant - self.widthConstraint.constant * sender.scale) / 2
+        let difference = -(self.widthConstraint.constant - self.widthConstraint.constant * sender.scale) / 2
         self.widthConstraint.constant *= sender.scale
         self.heightConstraint.constant *= sender.scale
         self.topConstraint.constant -= difference
@@ -62,7 +62,7 @@ class NIOGesturesViewController: NIOBaseDetailViewController {
     }
     
     @IBAction func pannedSquare(sender: UIPanGestureRecognizer) {
-        var pointInView = sender.translationInView(self.view)
+        let pointInView = sender.translationInView(self.view)
         self.topConstraint.constant += pointInView.y
         self.bottomConstraint.constant = self.view.bounds.size.height - self.topConstraint.constant - self.heightConstraint.constant
         self.leftConstraint.constant += pointInView.x
@@ -77,9 +77,9 @@ class NIOGesturesViewController: NIOBaseDetailViewController {
     }
     
     @IBAction func tappedSquare(sender: AnyObject) {
-        var random1 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
-        var random2 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
-        var random3 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
+        let random1 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
+        let random2 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
+        let random3 = CGFloat(arc4random()) /  CGFloat(UInt32.max)
         self.square.backgroundColor = UIColor(red: random1, green: random2, blue: random3, alpha: 1)
     }
 }

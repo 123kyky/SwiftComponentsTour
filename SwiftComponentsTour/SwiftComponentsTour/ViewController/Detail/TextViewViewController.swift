@@ -22,7 +22,7 @@ class NIOTextViewViewController: NIOBaseDetailViewController, UITextViewDelegate
     // MARK: - Keyboard
     
     func keyboardWillShow(notification: NSNotification) {
-        var keyboardFrame: CGRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardFrame: CGRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         self.bottomConstraint.constant = keyboardFrame.size.height
         UIView.animateWithDuration(notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double, animations: { () -> Void in

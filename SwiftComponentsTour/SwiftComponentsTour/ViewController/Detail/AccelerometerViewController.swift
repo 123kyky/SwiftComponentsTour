@@ -40,33 +40,33 @@ class NIOAccelerometerViewController: NIOBaseDetailViewController {
     func setUpDeviceMotionMonitoring() {
         if self.motionManager.deviceMotionAvailable {
             self.motionManager.deviceMotionUpdateInterval = 0.01
-            self.motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) {
-                [weak self] (data: CMDeviceMotion!, error: NSError!) in
-                self!.xValueLabel.text = self?.numberFormatter.stringFromNumber(data.gravity.x - self!.calibratedAcceleration.x)
-                self!.yValueLabel.text = self?.numberFormatter.stringFromNumber(data.gravity.y - self!.calibratedAcceleration.y)
-                self!.zValueLabel.text = self?.numberFormatter.stringFromNumber(data.gravity.z - self!.calibratedAcceleration.z)
+            self.motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {
+                (data, error) -> Void in
+                self.xValueLabel.text = self.numberFormatter.stringFromNumber(data!.gravity.x - self.calibratedAcceleration.x)
+                self.yValueLabel.text = self.numberFormatter.stringFromNumber(data!.gravity.y - self.calibratedAcceleration.y)
+                self.zValueLabel.text = self.numberFormatter.stringFromNumber(data!.gravity.z - self.calibratedAcceleration.z)
                 
-                if self?.functionalitySwitch.on == true {
-                    self?.setBackgroundWithCalibration()
-                } else if self?.view.backgroundColor != UIColor.whiteColor() {
-                    self?.view.backgroundColor = UIColor.whiteColor()
+                if self.functionalitySwitch.on == true {
+                    self.setBackgroundWithCalibration()
+                } else if self.view.backgroundColor != UIColor.whiteColor() {
+                    self.view.backgroundColor = UIColor.whiteColor()
                 }
-            }
+            })
         }
     }
     
     func setBackgroundWithCalibration() {
         UIView.animateWithDuration(self.motionManager.deviceMotionUpdateInterval, animations: { () -> Void in
-            self.view.backgroundColor = UIColor(red: CGFloat(abs(self.motionManager.deviceMotion.gravity.x)), green: CGFloat(abs(self.motionManager.deviceMotion.gravity.y)), blue: CGFloat(abs(self.motionManager.deviceMotion.gravity.z)), alpha: 1)
+            self.view.backgroundColor = UIColor(red: CGFloat(abs(self.motionManager.deviceMotion!.gravity.x)), green: CGFloat(abs(self.motionManager.deviceMotion!.gravity.y)), blue: CGFloat(abs(self.motionManager.deviceMotion!.gravity.z)), alpha: 1)
         })
     }
     
     // MARK: - Actions
 
     @IBAction func zeroButtonTapped(sender: AnyObject) {
-        self.calibratedAcceleration.x = self.motionManager.deviceMotion.gravity.x
-        self.calibratedAcceleration.y = self.motionManager.deviceMotion.gravity.y
-        self.calibratedAcceleration.z = self.motionManager.deviceMotion.gravity.z
+        self.calibratedAcceleration.x = self.motionManager.deviceMotion!.gravity.x
+        self.calibratedAcceleration.y = self.motionManager.deviceMotion!.gravity.y
+        self.calibratedAcceleration.z = self.motionManager.deviceMotion!.gravity.z
         
         self.view.backgroundColor = UIColor.whiteColor()
     }

@@ -27,7 +27,7 @@ class NIOStepperViewController: NIOBaseDetailViewController, UITextFieldDelegate
         self.dateLabel.text = self.dateFormatter.stringFromDate(NSDate())
         
         let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        let components: NSDateComponents = calendar.components(.CalendarUnitDay, fromDate: NSDate())
+        let components: NSDateComponents = calendar.components(.Day, fromDate: NSDate())
         self.dateStepper.value = Double(components.day)
         
         self.numberStepper.maximumValue = DBL_MAX
@@ -48,7 +48,7 @@ class NIOStepperViewController: NIOBaseDetailViewController, UITextFieldDelegate
     }
     
     @IBAction func numberTextFieldDidChange(sender: AnyObject) {
-        self.numberStepper.value = (self.numberTextField.text as NSString).doubleValue
+        self.numberStepper.value = NSString(string:self.numberTextField.text!).doubleValue
     }
     
     // MARK: - Text Field
@@ -72,7 +72,7 @@ class NIOStepperViewController: NIOBaseDetailViewController, UITextFieldDelegate
         return true
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         
         self.view.endEditing(true)
@@ -86,16 +86,16 @@ class NIOStepperViewController: NIOBaseDetailViewController, UITextFieldDelegate
     
     func adjustDate() {
         let date = self.dateFormatter.dateFromString(self.dateLabel!.text!)
-        var components: NSDateComponents = NSCalendar.currentCalendar().components(.CalendarUnitDay, fromDate: date!)
+        var components: NSDateComponents = NSCalendar.currentCalendar().components(.Day, fromDate: date!)
         
         var steppedDate: NSDate? = nil
         if components.day > Int(self.dateStepper.value) {
-            steppedDate = NSCalendar.currentCalendar().dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: date!, options: .SearchBackwards)
+            steppedDate = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: -1, toDate: date!, options: .SearchBackwards)
         } else {
-            steppedDate = NSCalendar.currentCalendar().dateByAddingUnit(.CalendarUnitDay, value: 1, toDate: date!, options: nil)
+            steppedDate = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: 1, toDate: date!, options: [])
         }
 
-        components = NSCalendar.currentCalendar().components(.CalendarUnitDay, fromDate: steppedDate!)
+        components = NSCalendar.currentCalendar().components(.Day, fromDate: steppedDate!)
         
         self.dateStepper.value = Double(components.day)
         self.dateLabel.text = self.dateFormatter.stringFromDate(steppedDate!)

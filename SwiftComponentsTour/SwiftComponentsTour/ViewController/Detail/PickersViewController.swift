@@ -45,7 +45,7 @@ class NIOPickersViewController: NIOBaseDetailViewController, UIPickerViewDataSou
         return self.pickerData.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.pickerData[row]
     }
     
@@ -70,7 +70,7 @@ class NIOPickersViewController: NIOBaseDetailViewController, UIPickerViewDataSou
     
     // MARK: - First Responder
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         
         self.view.endEditing(true)

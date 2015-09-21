@@ -50,8 +50,8 @@ class NIOTextFieldViewController: NIOBaseDetailViewController, UITextFieldDelega
     }
 
     @IBAction func textFieldDidChange(sender: AnyObject) {
-        let firstNumber = self.firstTextField.text.toInt()
-        let secondNumber = self.secondTextField.text.toInt()
+        let firstNumber = Int(self.firstTextField.text!)
+        let secondNumber = Int(self.secondTextField.text!)
         
         if firstNumber != nil && secondNumber != nil {
             self.timer!.invalidate()
@@ -88,7 +88,7 @@ class NIOTextFieldViewController: NIOBaseDetailViewController, UITextFieldDelega
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        var keyboardFrame: CGRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardFrame: CGRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         self.bottomConstraint.constant = keyboardFrame.size.height + 20
         UIView.animateWithDuration(notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double, animations: { () -> Void in
@@ -103,7 +103,7 @@ class NIOTextFieldViewController: NIOBaseDetailViewController, UITextFieldDelega
         })
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         
         self.view.endEditing(true)
