@@ -38,7 +38,7 @@ class NIOProgressViewController: NIOBaseDetailViewController {
         }
         
         self.isLoading = true
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("incrementProgressBar"), userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(NIOProgressViewController.incrementProgressBar), userInfo: nil, repeats: true)
     }
     
     func incrementProgressBar() {

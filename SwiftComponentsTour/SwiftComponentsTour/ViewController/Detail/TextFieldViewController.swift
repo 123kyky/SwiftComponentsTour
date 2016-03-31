@@ -23,8 +23,8 @@ class NIOTextFieldViewController: NIOBaseDetailViewController, UITextFieldDelega
         
         self.startAnimatingLabel()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NIOTextFieldViewController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NIOTextFieldViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
     }
     
     
@@ -69,7 +69,7 @@ class NIOTextFieldViewController: NIOBaseDetailViewController, UITextFieldDelega
         var i = 0
         for waitingString in waitingStrings {
             if self.statusLabel.text == waitingString {
-                ++i
+                i += 1
                 if i == waitingStrings.count {
                     i = 0
                 }
@@ -78,13 +78,13 @@ class NIOTextFieldViewController: NIOBaseDetailViewController, UITextFieldDelega
                 break
             }
         
-            ++i
+            i += 1
         }
     }
     
     func startAnimatingLabel() {
         self.statusLabel.text = waitingStrings.first
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("animateLabel"), userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(NIOTextFieldViewController.animateLabel), userInfo: nil, repeats: true)
     }
     
     func keyboardWillShow(notification: NSNotification) {

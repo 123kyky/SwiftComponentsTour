@@ -57,7 +57,7 @@ class NIOPickersViewController: NIOBaseDetailViewController, UIPickerViewDataSou
     
     func setUpDatePicker() {
         self.datePicker.datePickerMode = .Date;
-        self.datePicker.addTarget(self, action: Selector("datePickerDateChanged"), forControlEvents: .ValueChanged)
+        self.datePicker.addTarget(self, action: #selector(NIOPickersViewController.datePickerDateChanged), forControlEvents: .ValueChanged)
         self.datePicker.date = NSDate()
         self.datePicker.backgroundColor = UIColor.whiteColor()
         self.dateTextField.inputView = self.datePicker

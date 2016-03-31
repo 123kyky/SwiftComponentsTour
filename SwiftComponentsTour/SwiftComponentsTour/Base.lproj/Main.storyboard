@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -33,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="292" width="560" height="17"/>
+                                <rect key="frame" x="24" y="292" width="552" height="17"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,14 +125,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,7 +159,7 @@
                             <constraint firstItem="r7i-6Z-zg0" firstAttribute="width" secondItem="Vgp-wr-Zbe" secondAttribute="width" id="WPu-mO-m8u"/>
                             <constraint firstItem="0pX-8C-gzr" firstAttribute="top" secondItem="qu9-cP-u9h" secondAttribute="bottom" constant="-64" id="Yrx-5R-kOf"/>
                             <constraint firstItem="0pX-8C-gzr" firstAttribute="width" secondItem="Vgp-wr-Zbe" secondAttribute="width" id="mC5-7T-Sv7"/>
-                            <constraint firstItem="0pX-8C-gzr" firstAttribute="leading" secondItem="Vgp-wr-Zbe" secondAttribute="leadingMargin" constant="-16" id="sVG-x8-yXo"/>
+                            <constraint firstItem="0pX-8C-gzr" firstAttribute="leading" secondItem="Vgp-wr-Zbe" secondAttribute="leadingMargin" constant="-20" id="sVG-x8-yXo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Master" id="oqk-2Q-Lok"/>
@@ -378,8 +379,8 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <constraints>
                             <constraint firstItem="5QO-Ig-FrQ" firstAttribute="top" secondItem="ugj-db-lDR" secondAttribute="top" constant="20" symbolic="YES" id="51S-WL-Bzx"/>
                             <constraint firstItem="h3a-Uh-yaQ" firstAttribute="top" secondItem="5QO-Ig-FrQ" secondAttribute="bottom" id="Ao9-lP-rqa"/>
-                            <constraint firstItem="5QO-Ig-FrQ" firstAttribute="leading" secondItem="ugj-db-lDR" secondAttribute="leadingMargin" id="age-5a-T8E"/>
-                            <constraint firstItem="5QO-Ig-FrQ" firstAttribute="trailing" secondItem="ugj-db-lDR" secondAttribute="trailingMargin" id="wzm-gp-Tqa"/>
+                            <constraint firstItem="5QO-Ig-FrQ" firstAttribute="leading" secondItem="ugj-db-lDR" secondAttribute="leadingMargin" constant="-4" id="age-5a-T8E"/>
+                            <constraint firstItem="5QO-Ig-FrQ" firstAttribute="trailing" secondItem="ugj-db-lDR" secondAttribute="trailingMargin" constant="4" id="wzm-gp-Tqa"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -421,11 +422,11 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-fP-g49">
-                                <rect key="frame" x="191" y="488" width="219" height="43"/>
+                                <rect key="frame" x="190" y="488" width="219" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUB-2a-rZE">
-                                <rect key="frame" x="199" y="285" width="202" height="30"/>
+                                <rect key="frame" x="200" y="285" width="200" height="30"/>
                                 <state key="normal" title="Randomize background color">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -443,7 +444,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-Oe-ggk">
-                                <rect key="frame" x="220" y="361" width="161" height="30"/>
+                                <rect key="frame" x="221" y="361" width="159" height="30"/>
                                 <state key="normal" title="Add background image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -452,7 +453,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7a-c5-NlN">
-                                <rect key="frame" x="217" y="494" width="166" height="30"/>
+                                <rect key="frame" x="218" y="494" width="164" height="30"/>
                                 <state key="normal" title="Do something awesome">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -535,7 +536,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af5-XF-0Ro">
-                                <rect key="frame" x="281" y="115" width="39" height="21"/>
+                                <rect key="frame" x="281.5" y="115" width="38" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="t0v-dA-Coa"/>
                                 </constraints>
@@ -544,7 +545,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-4F-XXs">
-                                <rect key="frame" x="286" y="394" width="28" height="21"/>
+                                <rect key="frame" x="286" y="394" width="27" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Int-mC-yWo"/>
                                 </constraints>
@@ -626,13 +627,13 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="F8X-ck-juU">
-                                <rect key="frame" x="59" y="121" width="94" height="29"/>
+                                <rect key="frame" x="63" y="121" width="94" height="29"/>
                                 <connections>
                                     <action selector="stepperChangedValue:" destination="qAz-Ur-KXd" eventType="valueChanged" id="LRR-jg-yBE"/>
                                 </connections>
                             </stepper>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your fave number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ur-FT-3of">
-                                <rect key="frame" x="193" y="121" width="215" height="30"/>
+                                <rect key="frame" x="197" y="121" width="207" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
@@ -641,7 +642,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Even dates!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-h0-V73">
-                                <rect key="frame" x="63" y="256" width="90" height="21"/>
+                                <rect key="frame" x="68" y="256" width="89" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="vGw-ZA-Ea8"/>
                                 </constraints>
@@ -650,7 +651,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pgt-gy-r8c">
-                                <rect key="frame" x="59" y="285" width="94" height="29"/>
+                                <rect key="frame" x="63" y="285" width="94" height="29"/>
                                 <connections>
                                     <action selector="stepperChangedValue:" destination="qAz-Ur-KXd" eventType="valueChanged" id="iPH-xD-SXa"/>
                                 </connections>
@@ -671,7 +672,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-Ww-pYg">
-                                <rect key="frame" x="193" y="289" width="301" height="21"/>
+                                <rect key="frame" x="197" y="289" width="301" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="301" id="zrd-Wf-gmD"/>
                                 </constraints>
@@ -894,7 +895,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstAttribute="trailing" secondItem="iK5-M7-ar2" secondAttribute="trailing" id="ZhA-DV-jX8"/>
                             <constraint firstItem="9PN-hu-vxY" firstAttribute="centerX" secondItem="Wky-OC-Yz4" secondAttribute="centerX" id="aeI-wE-Q0b"/>
                             <constraint firstAttribute="centerY" secondItem="iK5-M7-ar2" secondAttribute="centerY" id="eS8-hP-4qz"/>
-                            <constraint firstItem="Cye-U3-SsB" firstAttribute="leading" secondItem="Wky-OC-Yz4" secondAttribute="leadingMargin" constant="-16" id="fXp-es-uRT"/>
+                            <constraint firstItem="Cye-U3-SsB" firstAttribute="leading" secondItem="Wky-OC-Yz4" secondAttribute="leadingMargin" constant="-20" id="fXp-es-uRT"/>
                             <constraint firstItem="9PN-hu-vxY" firstAttribute="centerX" secondItem="Afh-Wk-FhB" secondAttribute="centerX" id="h5M-ku-QVw"/>
                             <constraint firstItem="xIO-ut-Qad" firstAttribute="leading" secondItem="6fT-GB-CTG" secondAttribute="leading" id="heL-JN-ASK"/>
                             <constraint firstItem="6fT-GB-CTG" firstAttribute="trailing" secondItem="xIO-ut-Qad" secondAttribute="trailing" id="lEC-Gj-qaH"/>
@@ -944,7 +945,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 </constraints>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byd-Gg-aJa">
-                                <rect key="frame" x="284" y="202" width="33" height="30"/>
+                                <rect key="frame" x="283.5" y="202" width="34" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -988,7 +989,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-DK-zin">
-                                <rect key="frame" x="0.0" y="167" width="600" height="162"/>
+                                <rect key="frame" x="0.0" y="167" width="600" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu6-tJ-XKZ">
                                 <rect key="frame" x="227" y="138" width="147" height="21"/>
@@ -1009,7 +1010,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your favorite of Apple's favorite cities?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI8-ky-j8a">
-                                <rect key="frame" x="105.5" y="109" width="390.5" height="21"/>
+                                <rect key="frame" x="102.5" y="109" width="392.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="lDA-77-LHX"/>
                                 </constraints>
@@ -1026,11 +1027,11 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstAttribute="trailing" secondItem="zK6-DK-zin" secondAttribute="trailing" id="FlO-fl-nia"/>
                             <constraint firstAttribute="centerX" secondItem="zK6-DK-zin" secondAttribute="centerX" id="PUQ-B0-CvY"/>
                             <constraint firstItem="9Y6-Ex-8Cm" firstAttribute="centerX" secondItem="zK6-DK-zin" secondAttribute="centerX" id="Pb2-72-qHc"/>
-                            <constraint firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" constant="-0.5" id="dSp-ua-q3D"/>
+                            <constraint firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" constant="1.25" id="dSp-ua-q3D"/>
                             <constraint firstItem="nu6-tJ-XKZ" firstAttribute="top" secondItem="bI8-ky-j8a" secondAttribute="bottom" constant="8" symbolic="YES" id="nGK-n3-i7N"/>
                             <constraint firstAttribute="centerX" secondItem="nu6-tJ-XKZ" secondAttribute="centerX" constant="-0.5" id="tjc-SS-ggA"/>
                             <constraint firstItem="zK6-DK-zin" firstAttribute="leading" secondItem="SEn-78-ibk" secondAttribute="leading" id="txM-EG-EpN"/>
-                            <constraint firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" constant="-0.5" id="xSA-cJ-du5"/>
+                            <constraint firstAttribute="centerX" secondItem="bI8-ky-j8a" secondAttribute="centerX" constant="1.25" id="xSA-cJ-du5"/>
                             <constraint firstItem="bI8-ky-j8a" firstAttribute="top" secondItem="YoJ-jz-Wo4" secondAttribute="bottom" constant="89" id="xkG-cD-bLH"/>
                         </constraints>
                     </view>
@@ -1155,7 +1156,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <rect key="frame" x="276" y="561" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable FUNctionality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-Ae-qlF">
-                                <rect key="frame" x="220" y="532" width="160.5" height="20.5"/>
+                                <rect key="frame" x="220" y="532" width="159.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1173,31 +1174,25 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="z" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbt-y5-bAz">
-                                <rect key="frame" x="425" y="271" width="8.5" height="20.5"/>
+                                <rect key="frame" x="425" y="271" width="9" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-8U-abj">
-                                <rect key="frame" x="149" y="299" width="43" height="20.5"/>
+                                <rect key="frame" x="148" y="298" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-t6-15B">
-                                <rect key="frame" x="278" y="298" width="43" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC5-rt-o5G">
-                                <rect key="frame" x="407" y="299" width="43" height="20.5"/>
+                                <rect key="frame" x="279" y="298" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-31-dYX">
-                                <rect key="frame" x="280" y="418" width="39" height="35"/>
+                                <rect key="frame" x="277" y="418" width="40" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Zero">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1206,6 +1201,12 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                                     <action selector="zeroButtonTapped:" destination="UO8-2f-Y9W" eventType="touchUpInside" id="bsO-1B-9Aw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC5-rt-o5G">
+                                <rect key="frame" x="406" y="298" width="45" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1213,12 +1214,12 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstItem="WXv-sC-CnS" firstAttribute="centerY" secondItem="D41-Oa-YF0" secondAttribute="centerY" constant="1" id="4NF-zo-fMK"/>
                             <constraint firstItem="WXv-sC-CnS" firstAttribute="baseline" secondItem="D41-Oa-YF0" secondAttribute="baseline" id="6UM-dl-FqG"/>
                             <constraint firstItem="qbt-y5-bAz" firstAttribute="leading" secondItem="D41-Oa-YF0" secondAttribute="trailing" constant="120" id="A4J-8Q-dqN"/>
-                            <constraint firstItem="WC5-rt-o5G" firstAttribute="top" secondItem="qbt-y5-bAz" secondAttribute="bottom" constant="8" id="BJK-Ro-DxJ"/>
-                            <constraint firstAttribute="centerX" secondItem="ccv-t6-15B" secondAttribute="centerX" id="Ezp-ZJ-DWr"/>
+                            <constraint firstItem="WC5-rt-o5G" firstAttribute="top" secondItem="qbt-y5-bAz" secondAttribute="bottom" constant="6.5" id="BJK-Ro-DxJ"/>
+                            <constraint firstAttribute="centerX" secondItem="ccv-t6-15B" secondAttribute="centerX" constant="-1.5" id="Ezp-ZJ-DWr"/>
                             <constraint firstAttribute="centerX" secondItem="e8I-gb-FZR" secondAttribute="centerX" constant="-0.5" id="Rlq-WA-ksb"/>
                             <constraint firstItem="qbt-y5-bAz" firstAttribute="centerY" secondItem="D41-Oa-YF0" secondAttribute="centerY" constant="1" id="TH3-uU-fbI"/>
                             <constraint firstItem="MUH-Ae-qlF" firstAttribute="top" secondItem="2ge-31-dYX" secondAttribute="bottom" constant="79" id="TVw-il-njl"/>
-                            <constraint firstAttribute="centerX" secondItem="2ge-31-dYX" secondAttribute="centerX" id="b5E-ji-04Z"/>
+                            <constraint firstAttribute="centerX" secondItem="2ge-31-dYX" secondAttribute="centerX" constant="2.5" id="b5E-ji-04Z"/>
                             <constraint firstItem="qbt-y5-bAz" firstAttribute="centerX" secondItem="WC5-rt-o5G" secondAttribute="centerX" constant="0.5" id="eyw-5M-QRz"/>
                             <constraint firstItem="IK3-8U-abj" firstAttribute="centerX" secondItem="WXv-sC-CnS" secondAttribute="centerX" constant="-0.5" id="gGW-lP-4ho"/>
                             <constraint firstItem="D41-Oa-YF0" firstAttribute="leading" secondItem="WXv-sC-CnS" secondAttribute="trailing" constant="120" id="hhw-Vd-R2V"/>
@@ -1226,7 +1227,7 @@ Detract yet delight written farther his general. If in so bred at dare rose lose
                             <constraint firstAttribute="centerX" secondItem="D41-Oa-YF0" secondAttribute="centerX" constant="-0.5" id="lv1-qN-UEt"/>
                             <constraint firstItem="e8I-gb-FZR" firstAttribute="top" secondItem="MUH-Ae-qlF" secondAttribute="bottom" constant="8" id="n2C-Pg-9dp"/>
                             <constraint firstItem="D41-Oa-YF0" firstAttribute="top" secondItem="V8X-2j-6XO" secondAttribute="bottom" constant="250" id="roM-5j-8rv"/>
-                            <constraint firstItem="IK3-8U-abj" firstAttribute="top" secondItem="WXv-sC-CnS" secondAttribute="bottom" constant="8" id="smM-98-reI"/>
+                            <constraint firstItem="IK3-8U-abj" firstAttribute="top" secondItem="WXv-sC-CnS" secondAttribute="bottom" constant="6.5" id="smM-98-reI"/>
                             <constraint firstItem="TXh-nx-9fL" firstAttribute="top" secondItem="e8I-gb-FZR" secondAttribute="bottom" constant="8" id="zYh-Cj-bYD"/>
                         </constraints>
                         <variation key="default">
